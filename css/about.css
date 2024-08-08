@@ -4,3 +4,7 @@
     font-family: courier new;
     padding: 20px;
 }
+
+.content label h1{
+    font-size: large;
+}
