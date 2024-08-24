@@ -11,13 +11,16 @@ body {
     padding-right: 20px;
 }
 header {
-    background-color: transparent;
+    background-color: #f1f1f1;
     padding: 20px 20px 15px 20px;
     position: fixed;
     width: 100%;
     top: 0;
     left: 0;
     z-index: 1000;
+    border-bottom: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: #000000;
 }
 nav {
     display: flex;
@@ -26,16 +29,15 @@ nav {
     color: blue;
 }
 .logo {
-    font-size: 2.0em;
-    
+    font-size: 2em;
 }
 .logo a {
     text-decoration: none;
     color: blue;
 }
 .nav-links {
-    list-style:none;
-    display:contents;
+    list-style: none;
+    display: contents;
     align-items: center;
 }
 .nav-links li {
@@ -58,7 +60,7 @@ nav {
     cursor: pointer;
 }
 .dropdown-content {
-    display:none;
+    display: none;
     position: absolute;
     min-width: 160px;
     z-index: 1;
@@ -100,8 +102,8 @@ nav {
     transition: all 0.3s ease;
 }
 .content label a:hover {
-    text-decoration:line-through;
-    
+    text-decoration: line-through;
+
     text-decoration-color: blue;
 }
 .icon {
