@@ -127,46 +127,6 @@ nav {
     cursor: pointer;
 }
 
-main {
-    padding: 20px;
-}
-
-.project-list {
-    margin: 20px;
-}
-
-.project {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 0;
-    border-bottom: 1px solid blue;
-}
-
-.project-name {
-    font-size: 3em;
-    color: #000;
-    flex-grow: 7; /* Allow the project name to take up more space */
-    margin-right: 100px; /* Add space between project name and status */
-}
-
-.status {
-    font-weight: bold;
-    text-transform: uppercase;
-    font-size: 2em;
-}
-
-.launched {
-    color: orange;
-}
-
-.coming-soon {
-    color: red;
-}
-
-.in-progress {
-    color: green;
-}
 
 @media screen and (max-width: 768px) {
     .nav-links {
