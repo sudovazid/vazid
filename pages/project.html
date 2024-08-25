@@ -10,13 +10,19 @@
     <body>
         <header>
             <nav id="myTopnav">
-                <div class="logo"><a href="../index.html"><b>VAZID</b></a></div>
-            <ul class="nav-links">
-                <li><a href="../pages/project.html">CHECK MY CURRENT <br><b> PORJECT</b></a></li>
-                <li><a href="../pages/aboutme.html">IF YOU NEED HELP ON <br>PROJECT <b>CONNECT ME </b></a></li>    
-                
-                 <li class="dropdown">
-                     <button class="dropbtn" onclick="toggleDropdown(this)"> <b>Blogs</b></button>
+                <div class="logo">
+                    <a href="../index.html"><b>VAZID</b></a>
+                </div>
+                <ul class="nav-links">
+                    <li>
+                        <a href="../pages/project.html">CHECK MY CURRENT <br /><b> PORJECT</b></a>
+                    </li>
+                    <li>
+                        <a href="../pages/aboutme.html">IF YOU NEED HELP ON <br />PROJECT <b>CONNECT ME </b></a>
+                    </li>
+
+                    <li class="dropdown">
+                        <button class="dropbtn" onclick="toggleDropdown(this)"><b>Blogs</b></button>
                         <div class="dropdown-content">
                             <a href="#">Infra</a>
                             <a href="#">DevOps</a>
@@ -24,26 +30,60 @@
                             <a href="#">Cloud</a>
                         </div>
                     </li>
-                <li><a href="../pages/quiz.html">TEST YOUR SKILL <br> WITH <b> QUIZ</b></a></li>
+                    <li>
+                        <a href="../pages/quiz.html"
+                            >TEST YOUR SKILL <br />
+                            WITH <b> QUIZ</b></a
+                        >
+                    </li>
                 </ul>
                 <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">&#9776;</a>
             </nav>
         </header>
-        <main>
-            
-           
+        
             <section class="content">
-                <label><a href="https://moosam.site">Moosam - Your Clean Weather Companion</a></label>
-                <label><a href="#">Quote app project - Comming Soon</a></label>
-                <label><a href="#">Journey - Comming Soon</a></label>
-                <label><a href="#">Personal Dashboard Web App - Comming Soon</a></label>
-                <label><a href="#">Select Advertisments - Comming Soon</a></label>
-                <label><a href="#">Petition to bring back - Comming Soon</a></label>
-                <label><a href="#">Sudo District - Inprogress</a></label>
-                <label><a href="#">Daily System update - Comming Soon</a></label>
-                <label><a href="#">Adertisment Agency - Comming Soon</a></label>
+                <main>
+                    <div class="project-list">
+                        <div class="project">
+                            <span class="project-name">Moosam - Your Clean Weather Companion</span>
+                            <span class="status launched">LAUNCHED</span>
+                        </div>
+                        <div class="project">
+                            <span class="project-name">Quote App Project</span>
+                            <span class="status coming-soon">COMING SOON</span>
+                        </div>
+                        <div class="project">
+                            <span class="project-name">Journey</span>
+                            <span class="status coming-soon">COMING SOON</span>
+                        </div>
+                        <div class="project">
+                            <span class="project-name">Personal Dashboard Web App</span>
+                            <span class="status coming-soon">COMING SOON</span>
+                        </div>
+                        <div class="project">
+                            <span class="project-name">Select Advertisements</span>
+                            <span class="status coming-soon">COMING SOON</span>
+                        </div>
+                        <div class="project">
+                            <span class="project-name">Petition to Bring Back</span>
+                            <span class="status coming-soon">COMING SOON</span>
+                        </div>
+                        <div class="project">
+                            <span class="project-name">Sudo District</span>
+                            <span class="status in-progress">IN PROGRESS</span>
+                        </div>
+                        <div class="project">
+                            <span class="project-name">Daily System Update</span>
+                            <span class="status coming-soon">COMING SOON</span>
+                        </div>
+                        <div class="project">
+                            <span class="project-name">Advertisement Agency</span>
+                            <span class="status in-progress">IN PROGRESS</span>
+                        </div>
+                    </div>
+                </main>
             </section>
-        </main>
+        
         <script src="js/scripts.js"></script>
     </body>
 </html>
