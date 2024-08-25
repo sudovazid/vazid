@@ -5,17 +5,24 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>VAZID</title>
         <link rel="stylesheet" href="../css/styles.css" />
+        <link rel="stylesheet" href="../css/quiz.css" />
     </head>
     <body>
         <header>
             <nav id="myTopnav">
-                <div class="logo"><a href="../index.html"><b>VAZID</b></a></div>
-            <ul class="nav-links">
-                <li><a href="../pages/project.html">CHECK MY CURRENT <br><b> PORJECT</b></a></li>
-                <li><a href="../pages/aboutme.html">IF YOU NEED HELP ON <br>PROJECT <b>CONNECT ME </b></a></li>    
-                
-                 <li class="dropdown">
-                     <button class="dropbtn" onclick="toggleDropdown(this)"> <b>Blogs</b></button>
+                <div class="logo">
+                    <a href="../index.html"><b>VAZID</b></a>
+                </div>
+                <ul class="nav-links">
+                    <li>
+                        <a href="../pages/project.html">CHECK MY CURRENT <br /><b> PORJECT</b></a>
+                    </li>
+                    <li>
+                        <a href="../pages/aboutme.html">IF YOU NEED HELP ON <br />PROJECT <b>CONNECT ME </b></a>
+                    </li>
+
+                    <li class="dropdown">
+                        <button class="dropbtn" onclick="toggleDropdown(this)"><b>Blogs</b></button>
                         <div class="dropdown-content">
                             <a href="#">Infra</a>
                             <a href="#">DevOps</a>
@@ -23,17 +30,53 @@
                             <a href="#">Cloud</a>
                         </div>
                     </li>
-                <li><a href="../pages/quiz.html">TEST YOUR SKILL <br> WITH <b> QUIZ</b></a></li>
+                    <li>
+                        <a href="../pages/quiz.html"
+                            >TEST YOUR SKILL <br />
+                            WITH <b> QUIZ</b></a
+                        >
+                    </li>
                 </ul>
                 <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">&#9776;</a>
             </nav>
         </header>
         <section class="content">
-            <p style="text-align: center">Quizzes can be an effective tool for programmer to test their knowledge and reinforce what they have learned. 
+            <p>
+                Quizzes can be an effective tool for programmer to test their knowledge and reinforce what they have
+                learned.
             </p>
-            
+
+            <div class="card-container">
+                <div class="card">
+                    <h2>SQL BASIC</h2>
+                </div>
+                <div class="card">
+                    <h2>PYTHON</h2>
+                </div>
+                <div class="card">
+                    <h2>DOCKER</h2>
+                </div>
+                <div class="card">
+                    <h2>TERRAFORM</h2>
+                </div>
+                <div class="card">
+                    <h2>AWS</h2>
+                </div>
+                <div class="card">
+                    <h2>ML</h2>
+                </div>
+                <div class="card">
+                    <h2>GRAPH</h2>
+                </div>
+                <div class="card">
+                    <h2>LINUX</h2>
+                </div>
+                <div class="card">
+                    <h2>PNADAS</h2>
+                </div>
+            </div>
         </section>
-        
+
         <script src="js/scripts.js"></script>
     </body>
 </html>

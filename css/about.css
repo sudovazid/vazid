@@ -1,10 +1,16 @@
 
-.name{
-    font-size: 8em;
-    font-family: courier new;
-    padding: 20px;
+
+.main {
+    padding: 40px;
 }
 
-.content label h1{
-    font-size: large;
+.intro-text {
+    background-color: #0000FF;
+    color: white;
+    padding: 40px;
+    text-align: left;
+    font-size: 8vh;
+    font-family: 'Courier New', Courier, monospace;
+    line-height: 1.4;
+    margin: 20px;
 }
