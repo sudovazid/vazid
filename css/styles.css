@@ -127,7 +127,20 @@ nav {
     cursor: pointer;
 }
 
+.main {
+    padding: 40px;
+}
 
+.soon{
+     background-color: #0000FF;
+    color: white;
+    padding: 40px;
+    text-align: left;
+    font-size: 8vh;
+    font-family: 'Courier New', Courier, monospace;
+    line-height: 1.4;
+    margin: 20px;
+}
 @media screen and (max-width: 768px) {
     .nav-links {
         display: none;
@@ -186,18 +199,4 @@ nav {
         font-size: 1.5em;
     }
 
-    .project {
-        flex-direction: column; /* Stack project name and status vertically */
-        align-items: flex-start; /* Align items to the start */
-    }
-
-    .project-name {
-        margin-right: 0;
-        font-size: 2em;
-        margin-bottom: 10px; /* Add spacing between name and status */
-    }
-
-    .status {
-        font-size: 1.5em;
-    }
 }

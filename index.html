@@ -1,6 +1,5 @@
 <!doctype html>
 <html lang="en">
-
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,16 +7,21 @@
         <link rel="stylesheet" href="css/styles.css" />
     </head>
     <body>
-        
         <header>
-        <nav id="myTopnav">
-            <div class="logo"><a href="../index.html"><b>VAZID</b></a></div>
-            <ul class="nav-links">
-                <li><a href="pages/project.html">CHECK MY CURRENT <br><b> PORJECT</b></a></li>
-                <li><a href="pages/aboutme.html">IF YOU NEED HELP ON <br>PROJECT <b>CONNECT ME </b></a></li>    
-                
-                 <li class="dropdown">
-                     <button class="dropbtn" onclick="toggleDropdown(this)"> Check my <b>Blogs</b></button>
+            <nav id="myTopnav">
+                <div class="logo">
+                    <a href="../index.html"><b>VAZID</b></a>
+                </div>
+                <ul class="nav-links">
+                    <li>
+                        <a href="pages/project.html">CHECK MY CURRENT <br /><b> PORJECT</b></a>
+                    </li>
+                    <li>
+                        <a href="pages/aboutme.html">IF YOU NEED HELP ON <br />PROJECT <b>CONNECT ME </b></a>
+                    </li>
+
+                    <li class="dropdown">
+                        <button class="dropbtn" onclick="toggleDropdown(this)">Check my <b>Blogs</b></button>
                         <div class="dropdown-content">
                             <a href="#">Linux</a>
                             <a href="#">Infra</a>
@@ -27,54 +31,35 @@
                             <a href="#">Data science</a>
                         </div>
                     </li>
-                <li><a href="pages/quiz.html">TEST YOUR SKILL <br> WITH <b> QUIZ</b></a></li>
-                
-            </ul>
-            <a
-                    href="javascript:void(0);"
-                    class="icon"
-                    onclick="toggleMenu()"
-                    >&#9776;</a
-                >
-        </nav>
-    </header>
+                    <li>
+                        <a href="../pages/soon.html"
+                            >TEST YOUR SKILL <br />
+                            WITH <b> QUIZ</b></a
+                        >
+                    </li>
+                </ul>
+                <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">&#9776;</a>
+            </nav>
+        </header>
         <main>
             <section class="content">
+                <label><a href="#">Terraform Hacks: Effortlessly list available AWS Machine Images</a></label>
                 <label
-                    ><a href="#"
-                        >Terraform Hacks: Effortlessly list available AWS
-                        Machine Images</a
-                    ></label
-                >
-                <label
-                    ><a
-                        href="https://blog.vazid.site/google-bigquery-interview-question"
+                    ><a href="https://blog.vazid.site/google-bigquery-interview-question"
                         >Bigquery Interview question</a
                     ></label
                 >
-                <label
-                    ><a href="#"
-                        >Building monitoring architecture in Azure cloud using
-                        terraform</a
-                    ></label
-                >
+                <label><a href="#">Building monitoring architecture in Azure cloud using terraform</a></label>
 
-                <label
-                    ><a href="#"
-                        >Personal linux monitoring dashboard using grafana</a
-                    ></label
-                >
-                <label
-                    ><a href="#">Budget aws serverless architecture</a></label
-                >
+                <label><a href="#">Personal linux monitoring dashboard using grafana</a></label>
+                <label><a href="#">Budget aws serverless architecture</a></label>
                 <label><a href="#">Automate github to Ec2 deployment</a></label>
                 <label>
                     <a href="#">Stactic Website: A Robust AWS-based Web Application Framework </a>
                 </label>
                 <label>
-                    <a href="#">File Organizer: Linux Project #1  </a>
+                    <a href="#">File Organizer: Linux Project #1 </a>
                 </label>
-                
             </section>
         </main>
         <script src="js/scripts.js"></script>
