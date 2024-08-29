@@ -8,82 +8,119 @@
         <link rel="stylesheet" href="../css/project.css" />
     </head>
     <body>
-        <header>
-            <nav id="myTopnav">
-                <div class="logo">
-                    <a href="../index.html"><b>VAZID</b></a>
-                </div>
-                <ul class="nav-links">
-                    <li>
-                        <a href="../pages/project.html">CHECK MY CURRENT <br /><b> PORJECT</b></a>
-                    </li>
-                    <li>
-                        <a href="../pages/aboutme.html">IF YOU NEED HELP ON <br />PROJECT <b>CONNECT ME </b></a>
-                    </li>
-
-                    <li class="dropdown">
-                        <button class="dropbtn" onclick="toggleDropdown(this)"><b>Blogs</b></button>
-                        <div class="dropdown-content">
-                            <a href="#">Infra</a>
-                            <a href="#">DevOps</a>
-                            <a href="#">Monitoring</a>
-                            <a href="#">Cloud</a>
-                        </div>
-                    </li>
-                    <li>
-                        <a href="../pages/soon.html"
-                            >TEST YOUR SKILL <br />
-                            WITH <b> QUIZ</b></a
-                        >
-                    </li>
-                </ul>
-                <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">&#9776;</a>
-            </nav>
-        </header>
-        
-            <section class="content">
-                <main>
-                    <div class="project-list">
-                        <div class="project">
-                            <span class="project-name"><a href="https://moosam.site/">Moosam - Your Clean Weather Companion</a></span>
-                            <span class="status launched">LAUNCHED</span>
-                        </div>
-                        <div class="project">
-                            <span class="project-name">Quote App Project</span>
-                            <span class="status coming-soon">COMING SOON</span>
-                        </div>
-                        <div class="project">
-                            <span class="project-name">Journey</span>
-                            <span class="status coming-soon">COMING SOON</span>
-                        </div>
-                        <div class="project">
-                            <span class="project-name">Personal Dashboard Web App</span>
-                            <span class="status coming-soon">COMING SOON</span>
-                        </div>
-                        <div class="project">
-                            <span class="project-name">Select Advertisements</span>
-                            <span class="status coming-soon">COMING SOON</span>
-                        </div>
-                        <div class="project">
-                            <span class="project-name">Petition to Bring Back</span>
-                            <span class="status coming-soon">COMING SOON</span>
-                        </div>
-                        <div class="project">
-                            <span class="project-name">Sudo District</span>
-                            <span class="status in-progress">IN PROGRESS</span>
-                        </div>
-                        <div class="project">
-                            <span class="project-name">Daily System Update</span>
-                            <span class="status coming-soon">COMING SOON</span>
-                        </div>
-                        <div class="project">
-                            <span class="project-name">Advertisement Agency</span>
-                            <span class="status in-progress">IN PROGRESS</span>
-                        </div>
+       <header>
+        <nav>
+            <div class="logo">
+                <a href="../index.html"><strong>VAZID</strong></a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="../pages/project.html">MY CURRENT <strong>PROJECT</strong></a></li>
+                <li><a href="../pages/aboutme.html">CONNECT ME</a></li>
+                <li class="dropdown">
+                    <button class="dropbtn">CHECK MY <strong>BLOGS</strong></button>
+                    <div class="dropdown-content">
+                        <a href="#">Linux</a>
+                        <a href="#">Infra</a>
+                        <a href="#">DevOps</a>
+                        <a href="#">Monitoring</a>
+                        <a href="#">Cloud</a>
+                        <a href="#">Data science</a>
                     </div>
-                </main>
-            </section>
-        
-        <script src="js/scripts.js"></script>
+                </li>
+                <li><a href="../pages/soon.html">TAKE <strong>QUIZ</strong></a></li>
+            </ul>
+            <div class="icon" onclick="toggleMenu()">☰</div>
+        </nav>
+    </header>
+
+        <section class="content">
+            <main>
+                <div class="project-list">
+                    <div class="project">
+                        <span class="project-name"
+                            ><a href="https://moosam.site/">Moosam - Your Clean Weather Companion</a></span
+                        >
+                        <span class="status launched">LAUNCHED</span>
+                    </div>
+                    <div class="project">
+                        <span class="project-name">Quote App Project</span>
+                        <span class="status coming-soon">COMING SOON</span>
+                    </div>
+                    <div class="project">
+                        <span class="project-name">Journey</span>
+                        <span class="status coming-soon">COMING SOON</span>
+                    </div>
+                    <div class="project">
+                        <span class="project-name">Personal Dashboard Web App</span>
+                        <span class="status coming-soon">COMING SOON</span>
+                    </div>
+                    <div class="project">
+                        <span class="project-name">Select Advertisements</span>
+                        <span class="status coming-soon">COMING SOON</span>
+                    </div>
+                    <div class="project">
+                        <span class="project-name">Petition to Bring Back</span>
+                        <span class="status coming-soon">COMING SOON</span>
+                    </div>
+                    <div class="project">
+                        <span class="project-name">District Lab</span>
+                        <span class="status in-progress">IN PROGRESS</span>
+                    </div>
+                    <div class="project">
+                        <span class="project-name">Daily System Update</span>
+                        <span class="status coming-soon">COMING SOON</span>
+                    </div>
+                    <div class="project">
+                        <span class="project-name">Advertisement Agency</span>
+                        <span class="status in-progress">IN PROGRESS</span>
+                    </div>
+                </div>
+            </main>
+        </section>
+
+        <footer>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About VAZID</h3>
+                    <p>VAZID is a Freelance DevOps engineer, Web developer, Web designer, and data engineer.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Articles</a></li>
+                        <li><a href="#">Categories</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <p>Email: info@vazid.com</p>
+                    <p>Phone: (123) 456-7890</p>
+                    <p>Address: 123 Tech Street, Digital City</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="social-icons">
+                    <a href="#" aria-label="Facebook"></a>
+                    <a href="#" aria-label="Twitter"></a>
+                    <a href="#" aria-label="Instagram"></a>
+                    <a href="#" aria-label="LinkedIn"></a>
+                </div>
+                <p>© 2024 VAZID. All rights reserved.</p>
+                <p>Designed by VAZID</p>
+            </div>
+        </footer>
+
+        <script>
+            function toggleMenu() {
+                var x = document.querySelector(".nav-links");
+                if (x.style.display === "flex") {
+                    x.style.display = "none";
+                } else {
+                    x.style.display = "flex";
+                }
+            }
+        </script>
     </body>
 </html>

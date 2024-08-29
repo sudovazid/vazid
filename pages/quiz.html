@@ -9,35 +9,31 @@
     </head>
     <body>
         <header>
-            <nav id="myTopnav">
+            <nav>
                 <div class="logo">
-                    <a href="../index.html"><b>VAZID</b></a>
+                    <a href="../index.html"><strong>VAZID</strong></a>
                 </div>
                 <ul class="nav-links">
                     <li>
-                        <a href="../pages/project.html">CHECK MY CURRENT <br /><b> PORJECT</b></a>
+                        <a href="pages/project.html">MY CURRENT <strong>PROJECT</strong></a>
                     </li>
-                    <li>
-                        <a href="../pages/aboutme.html">IF YOU NEED HELP ON <br />PROJECT <b>CONNECT ME </b></a>
-                    </li>
-
+                    <li><a href="pages/aboutme.html">CONNECT ME</a></li>
                     <li class="dropdown">
-                        <button class="dropbtn" onclick="toggleDropdown(this)"><b>Blogs</b></button>
+                        <button class="dropbtn">CHECK MY <strong>BLOGS</strong></button>
                         <div class="dropdown-content">
+                            <a href="#">Linux</a>
                             <a href="#">Infra</a>
                             <a href="#">DevOps</a>
                             <a href="#">Monitoring</a>
                             <a href="#">Cloud</a>
+                            <a href="#">Data science</a>
                         </div>
                     </li>
                     <li>
-                        <a href="../pages/soon.html"
-                            >TEST YOUR SKILL <br />
-                            WITH <b> QUIZ</b></a
-                        >
+                        <a href="../pages/soon.html">TAKE <strong>QUIZ</strong></a>
                     </li>
                 </ul>
-                <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">&#9776;</a>
+                <div class="icon" onclick="toggleMenu()">☰</div>
             </nav>
         </header>
         <section class="content">
@@ -76,7 +72,49 @@
                 </div>
             </div>
         </section>
+        <footer>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About VAZID</h3>
+                    <p>VAZID is a Freelance DevOps engineer, Web developer, Web designer, and data engineer.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Articles</a></li>
+                        <li><a href="#">Categories</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <p>Email: info@vazid.com</p>
+                    <p>Phone: (123) 456-7890</p>
+                    <p>Address: 123 Tech Street, Digital City</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="social-icons">
+                    <a href="#" aria-label="Facebook"></a>
+                    <a href="#" aria-label="Twitter"></a>
+                    <a href="#" aria-label="Instagram"></a>
+                    <a href="#" aria-label="LinkedIn"></a>
+                </div>
+                <p>© 2024 VAZID. All rights reserved.</p>
+                <p>Designed by VAZID</p>
+            </div>
+        </footer>
 
-        <script src="js/scripts.js"></script>
+        <script>
+            function toggleMenu() {
+                var x = document.querySelector(".nav-links");
+                if (x.style.display === "flex") {
+                    x.style.display = "none";
+                } else {
+                    x.style.display = "flex";
+                }
+            }
+        </script>
     </body>
 </html>

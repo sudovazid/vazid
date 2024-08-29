@@ -1,67 +1,102 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>VAZID</title>
-        <link rel="stylesheet" href="css/styles.css" />
-    </head>
-    <body>
-        <header>
-            <nav id="myTopnav">
-                <div class="logo">
-                    <a href="../index.html"><b>VAZID</b></a>
-                </div>
-                <ul class="nav-links">
-                    <li>
-                        <a href="pages/project.html">CHECK MY CURRENT <br /><b> PORJECT</b></a>
-                    </li>
-                    <li>
-                        <a href="pages/aboutme.html">IF YOU NEED HELP ON <br />PROJECT <b>CONNECT ME </b></a>
-                    </li>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VAZID - Technology and Innovation Magazine</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="../index.html"><strong>VAZID</strong></a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="pages/project.html">MY CURRENT <strong>PROJECT</strong></a></li>
+                <li><a href="pages/aboutme.html">CONNECT ME</a></li>
+                <li class="dropdown">
+                    <button class="dropbtn">CHECK MY <strong>BLOGS</strong></button>
+                    <div class="dropdown-content">
+                        <a href="#">Linux</a>
+                        <a href="#">Infra</a>
+                        <a href="#">DevOps</a>
+                        <a href="#">Monitoring</a>
+                        <a href="#">Cloud</a>
+                        <a href="#">Data science</a>
+                    </div>
+                </li>
+                <li><a href="../pages/soon.html">TAKE <strong>QUIZ</strong></a></li>
+            </ul>
+            <div class="icon" onclick="toggleMenu()">☰</div>
+        </nav>
+    </header>
 
-                    <li class="dropdown">
-                        <button class="dropbtn" onclick="toggleDropdown(this)">Check my <b>Blogs</b></button>
-                        <div class="dropdown-content">
-                            <a href="#">Linux</a>
-                            <a href="#">Infra</a>
-                            <a href="#">DevOps</a>
-                            <a href="#">Monitoring</a>
-                            <a href="#">Cloud</a>
-                            <a href="#">Data science</a>
-                        </div>
-                    </li>
-                    <li>
-                        <a href="../pages/soon.html"
-                            >TEST YOUR SKILL <br />
-                            WITH <b> QUIZ</b></a
-                        >
-                    </li>
+    <main role="main">
+        <section class="content">
+            <h1>Launched Projects</h1>
+            <label><a href="https://moosam.site/">Moosam - <br>Your Weather Companion</a></label>
+            
+
+            <h1>Featured Blogs</h1>
+            <label><a href="#">Terraform Hacks: Effortlessly list available AWS Machine Images</a></label>
+            <label><a href="https://blog.vazid.site/google-bigquery-interview-question">Bigquery Interview question</a></label>
+            <label><a href="#">Building monitoring architecture in Azure cloud using terraform</a></label>
+
+            <h1>More Blogs</h1>
+            <label><a href="#">Personal linux monitoring dashboard using grafana</a></label>
+            <label><a href="#">Budget aws serverless architecture</a></label>
+            <label><a href="#">Automate github to Ec2 deployment</a></label>
+            <label><a href="#">Stactic Website: A Robust AWS-based Web Application Framework</a></label>
+            <label><a href="#">File Organizer: Linux Project #1</a></label>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About VAZID</h3>
+                <p>VAZID is a Freelance DevOps engineer,
+                    Web developer,
+                    Web designer, and data engineer.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Articles</a></li>
+                    <li><a href="#">Categories</a></li>
+                    <li><a href="#">Contact</a></li>
                 </ul>
-                <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">&#9776;</a>
-            </nav>
-        </header>
-        <main>
-            <section class="content">
-                <label><a href="#">Terraform Hacks: Effortlessly list available AWS Machine Images</a></label>
-                <label
-                    ><a href="https://blog.vazid.site/google-bigquery-interview-question"
-                        >Bigquery Interview question</a
-                    ></label
-                >
-                <label><a href="#">Building monitoring architecture in Azure cloud using terraform</a></label>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Email: info@vazid.com</p>
+                <p>Phone: (123) 456-7890</p>
+                <p>Address: 123 Tech Street, Digital City</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="social-icons">
+                <a href="#" aria-label="Facebook"></a>
+                <a href="#" aria-label="Twitter"></a>
+                <a href="#" aria-label="Instagram"></a>
+                <a href="#" aria-label="LinkedIn"></a>
+            </div>
+            <p>© 2024 VAZID. All rights reserved.</p>
+            <p>Designed by VAZID</p>
+        </div>
+    </footer>
 
-                <label><a href="#">Personal linux monitoring dashboard using grafana</a></label>
-                <label><a href="#">Budget aws serverless architecture</a></label>
-                <label><a href="#">Automate github to Ec2 deployment</a></label>
-                <label>
-                    <a href="#">Stactic Website: A Robust AWS-based Web Application Framework </a>
-                </label>
-                <label>
-                    <a href="#">File Organizer: Linux Project #1 </a>
-                </label>
-            </section>
-        </main>
-        <script src="js/scripts.js"></script>
-    </body>
+    <script>
+        function toggleMenu() {
+            var x = document.querySelector(".nav-links");
+            if (x.style.display === "flex") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "flex";
+            }
+        }
+    </script>
+</body>
 </html>
