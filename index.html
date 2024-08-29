@@ -1,102 +1,152 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VAZID - Technology and Innovation Magazine</title>
-    <link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
-    <header>
-        <nav>
-            <div class="logo">
-                <a href="../index.html"><strong>VAZID</strong></a>
-            </div>
-            <ul class="nav-links">
-                <li><a href="pages/project.html">MY CURRENT <strong>PROJECT</strong></a></li>
-                <li><a href="pages/aboutme.html">CONNECT ME</a></li>
-                <li class="dropdown">
-                    <button class="dropbtn">CHECK MY <strong>BLOGS</strong></button>
-                    <div class="dropdown-content">
-                        <a href="#">Linux</a>
-                        <a href="#">Infra</a>
-                        <a href="#">DevOps</a>
-                        <a href="#">Monitoring</a>
-                        <a href="#">Cloud</a>
-                        <a href="#">Data science</a>
-                    </div>
-                </li>
-                <li><a href="../pages/soon.html">TAKE <strong>QUIZ</strong></a></li>
-            </ul>
-            <div class="icon" onclick="toggleMenu()">☰</div>
-        </nav>
-    </header>
-
-    <main role="main">
-        <section class="content">
-            <h1>Launched Projects</h1>
-            <label><a href="https://moosam.site/">Moosam - <br>Your Weather Companion</a></label>
-            
-
-            <h1>Featured Blogs</h1>
-            <label><a href="#">Terraform Hacks: Effortlessly list available AWS Machine Images</a></label>
-            <label><a href="https://blog.vazid.site/google-bigquery-interview-question">Bigquery Interview question</a></label>
-            <label><a href="#">Building monitoring architecture in Azure cloud using terraform</a></label>
-
-            <h1>More Blogs</h1>
-            <label><a href="#">Personal linux monitoring dashboard using grafana</a></label>
-            <label><a href="#">Budget aws serverless architecture</a></label>
-            <label><a href="#">Automate github to Ec2 deployment</a></label>
-            <label><a href="#">Stactic Website: A Robust AWS-based Web Application Framework</a></label>
-            <label><a href="#">File Organizer: Linux Project #1</a></label>
-        </section>
-    </main>
-
-    <footer>
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3>About VAZID</h3>
-                <p>VAZID is a Freelance DevOps engineer,
-                    Web developer,
-                    Web designer, and data engineer.</p>
-            </div>
-            <div class="footer-section">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Articles</a></li>
-                    <li><a href="#">Categories</a></li>
-                    <li><a href="#">Contact</a></li>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>VAZID - Technology and Innovation Magazine</title>
+        <link rel="stylesheet" href="css/styles.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    </head>
+    <body>
+        <header>
+            <nav>
+                <div class="logo">
+                    <a href="../index.html"><strong>VAZID</strong></a>
+                </div>
+                <ul class="nav-links">
+                    <li>
+                        <a href="pages/project.html">MY CURRENT <strong>PROJECTS</strong></a>
+                    </li>
+                    <li><a href="pages/aboutme.html">CONNECT WITH ME</a></li>
+                    <li class="dropdown">
+                        <button class="dropbtn">CHECK MY <strong>BLOGS</strong></button>
+                        <div class="dropdown-content">
+                            <a href="#">Linux</a>
+                            <a href="#">Infra</a>
+                            <a href="#">DevOps</a>
+                            <a href="#">Monitoring</a>
+                            <a href="#">Cloud</a>
+                            <a href="#">Data science</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="../pages/soon.html">TAKE <strong>QUIZ</strong></a>
+                    </li>
                 </ul>
-            </div>
-            <div class="footer-section">
-                <h3>Contact Us</h3>
-                <p>Email: info@vazid.com</p>
-                <p>Phone: (123) 456-7890</p>
-                <p>Address: 123 Tech Street, Digital City</p>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <div class="social-icons">
-                <a href="#" aria-label="Facebook"></a>
-                <a href="#" aria-label="Twitter"></a>
-                <a href="#" aria-label="Instagram"></a>
-                <a href="#" aria-label="LinkedIn"></a>
-            </div>
-            <p>© 2024 VAZID. All rights reserved.</p>
-            <p>Designed by VAZID</p>
-        </div>
-    </footer>
+                <button id="dark-mode-toggle" class="dark-mode-toggle">
+                    <i class="fas fa-sun"></i>
+                    <i class="fas fa-moon"></i>
+                </button>
+                <div class="icon" onclick="toggleMenu()">☰</div>
+            </nav>
+        </header>
 
-    <script>
-        function toggleMenu() {
-            var x = document.querySelector(".nav-links");
-            if (x.style.display === "flex") {
-                x.style.display = "none";
-            } else {
-                x.style.display = "flex";
+        <main role="main">
+            <section class="content">
+                <h1>Launched Projects</h1>
+                <label>
+                    <a href="#">Moosam - Your Weather Companion</a>
+                    <span class="tag">Weather App</span>
+                    <span class="tag">Website</span>
+                </label>
+                <label>
+                    <a href="#">Terraform Hacks: Effortlessly list available AWS Machine Images</a>
+                    <span class="tag">AWS</span>
+                    <span class="tag">Terraform</span>
+                </label>
+
+                <h1>Featured Blogs</h1>
+                <label>
+                    <a href="https://blog.vazid.site/google-bigquery-interview-question">BigQuery Interview Questions</a>
+                    <span class="tag">BigQuery</span>
+                    <span class="tag">Interview</span>
+                </label>
+                <label>
+                    <a href="#">Building Monitoring Architecture in Azure Cloud Using Terraform</a>
+                    <span class="tag">Azure</span>
+                    <span class="tag">Monitoring</span>
+                    <span class="tag">Terraform</span>
+                </label>
+
+                <h1>More Blogs</h1>
+                <label>
+                    <a href="#">Personal Linux Monitoring Dashboard Using Grafana</a>
+                    <span class="tag">Linux</span>
+                    <span class="tag">Monitoring</span>
+                    <span class="tag">Grafana</span>
+                </label>
+                <label>
+                    <a href="#">Budget AWS Serverless Architecture</a>
+                    <span class="tag">AWS</span>
+                    <span class="tag">Serverless</span>
+                </label>
+                <label>
+                    <a href="#">Automate GitHub to EC2 Deployment</a>
+                    <span class="tag">GitHub</span>
+                    <span class="tag">EC2</span>
+                    <span class="tag">Automation</span>
+                </label>
+                <label>
+                    <a href="#">Static Website: A Robust AWS-Based Web Application Framework</a>
+                    <span class="tag">AWS</span>
+                    <span class="tag">Static Website</span>
+                </label>
+                <label>
+                    <a href="#">File Organizer: Linux Project #1</a>
+                    <span class="tag">Linux</span>
+                    <span class="tag">Project</span>
+                </label>
+            </section>
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About VAZID</h3>
+                    <p><b>VAZID</b> is a Freelance DevOps engineer, Web developer, Web designer, and data engineer.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Articles</a></li>
+                        <li><a href="#">Categories</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <p>Email: sheikh.vazid.ahmed@gmail.com</p>
+                    <p>Current Location: Mangalore, Karnataka</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="social-icons">
+                    <a href="#" aria-label="Facebook"></a>
+                    <a href="#" aria-label="Twitter"></a>
+                    <a href="#" aria-label="Instagram"></a>
+                    <a href="#" aria-label="LinkedIn"></a>
+                </div>
+                <p>© 2024 VAZID. All rights reserved.</p>
+                <p>Designed by VAZID</p>
+            </div>
+        </footer>
+
+        <script>
+            function toggleMenu() {
+                var x = document.querySelector(".nav-links");
+                if (x.style.display === "flex") {
+                    x.style.display = "none";
+                } else {
+                    x.style.display = "flex";
+                }
             }
-        }
-    </script>
-</body>
+
+            const darkModeToggle = document.getElementById("dark-mode-toggle");
+            darkModeToggle.addEventListener("click", () => {
+                document.body.classList.toggle("dark-mode");
+                darkModeToggle.classList.toggle("dark-mode");
+            });
+        </script>
+    </body>
 </html>

@@ -1,9 +1,11 @@
+/* Reset and Box-Sizing */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
+/* Body and Typography */
 body {
     font-family: "Courier New", Courier, monospace;
     background-color: #f1f1f1;
@@ -13,13 +15,14 @@ body {
     flex-direction: column;
 }
 
+/* Header Styles */
 header {
     background-color: #f1f1f1;
     padding: 20px;
     position: sticky;
     top: 0;
     z-index: 1000;
-    border-bottom: 1px solid #000000;
+    border-bottom: 1px solid #000;
 }
 
 nav {
@@ -38,6 +41,7 @@ nav {
     color: blue;
 }
 
+/* Navigation Links */
 .nav-links {
     list-style: none;
     display: flex;
@@ -54,6 +58,7 @@ nav {
     color: blue;
 }
 
+/* Dropdown Menu */
 .dropdown {
     position: relative;
 }
@@ -73,7 +78,7 @@ nav {
     min-width: 160px;
     z-index: 1;
     background-color: #f1f1f1;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .dropdown-content a {
@@ -93,38 +98,38 @@ nav {
     display: block;
 }
 
+/* Main Content Styles */
 main {
     flex: 1;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     padding: 20px;
     gap: 20px;
 }
 
 .content {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
     width: 100%;
-    
 }
 
 .content label {
-    font-size: 2.5em;
+    font-size: 1.8em;
     margin-bottom: 10px;
     background-color: #f1f1f1;
     padding: 20px;
     box-shadow: 0 10px 6px rgba(48, 47, 46, 0.79);
     border: 1px solid #000;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-       
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
 }
 
 .content label:hover {
     transform: translateY(-5px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
     background-color: blue;
-    text-decoration: line-through;
     color: white;
 }
 
@@ -132,7 +137,6 @@ main {
     text-decoration: none;
     color: inherit;
     display: block;
-    
     transition: all 0.3s ease;
 }
 
@@ -149,18 +153,142 @@ main {
     cursor: pointer;
 }
 
-.soon {
-    background-color: #0000FF;
-    color: white;
-    padding: 40px;
-    text-align: left;
-    font-size: 8vh;
-    font-family: 'Courier New', Courier, monospace;
-    line-height: 1.4;
-    margin: 20px 0;
-    grid-column: 1 / -1;
+/* Dark Mode Toggle */
+.dark-mode-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    margin-left: 20px;
+    padding: 5px;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
 }
 
+.dark-mode-toggle i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition:
+        opacity 0.3s ease,
+        transform 0.3s ease;
+}
+
+.dark-mode-toggle .fa-sun {
+    opacity: 1;
+}
+
+.dark-mode-toggle .fa-moon {
+    opacity: 0;
+    transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.dark-mode-toggle.dark-mode .fa-sun {
+    opacity: 0;
+    transform: translate(-50%, -50%) rotate(-90deg);
+}
+
+.dark-mode-toggle.dark-mode .fa-moon {
+    opacity: 1;
+    transform: translate(-50%, -50%) rotate(0);
+}
+
+/* Dark Mode Styles */
+.dark-mode {
+    background-color: #333;
+    color: #f1f1f1;
+}
+
+.dark-mode header {
+    background-color: #222;
+    border-bottom-color: #444;
+}
+
+.dark-mode .logo a,
+.dark-mode .nav-links a,
+.dark-mode .dropbtn {
+    color: #f1f1f1;
+}
+
+.dark-mode .dropdown-content {
+    background-color: #222;
+}
+
+.dark-mode .dropdown-content a:hover {
+    background-color: #444;
+}
+
+.dark-mode .content label {
+    background-color: #444;
+    color: #f1f1f1;
+    box-shadow: 0 10px 6px rgba(0, 0, 0, 0.5);
+}
+
+.dark-mode .content label:hover {
+    background-color: #0000ff;
+    color: #f1f1f1;
+}
+
+.dark-mode footer {
+    background-color: #222;
+    border-top-color: #444;
+}
+
+.dark-mode .footer-section h3 {
+    color: #f1f1f1;
+}
+
+.dark-mode .footer-section ul li a,
+.dark-mode .footer-bottom,
+.dark-mode .social-icons a {
+    color: #ccc;
+}
+
+.dark-mode .footer-section ul li a:hover,
+.dark-mode .social-icons a:hover {
+    color: #2196f3;
+}
+
+/* Tag Styles */
+.tag {
+    display: inline-block;
+    background-color: #e0e0e0;
+    color: #333;
+    padding: 2px 8px;
+    border-radius: 15px;
+    font-size: 0.4em;
+    margin-right: 5px;
+    margin-top: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.content label {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.content label a {
+    flex: 1 1 100%;
+    margin-bottom: 5px;
+}
+
+/* Dark Mode Styles for Tags */
+.dark-mode .tag {
+    background-color: #555;
+    color: #f1f1f1;
+}
+
+/* Hover Effect for Tags */
+.content label:hover .tag {
+    background-color: #0000FF;
+    color: white;
+}
+
+/* Footer Styles */
 footer {
     background-color: #f8f8f8;
     border-top: 1px solid #040404;
@@ -206,7 +334,7 @@ footer {
 }
 
 .footer-section ul li a:hover {
-    color: #0000FF;
+    color: #0000ff;
 }
 
 .footer-bottom {
@@ -234,10 +362,10 @@ footer {
 }
 
 .social-icons a:hover {
-    color: #0000FF;
+    color: #0000ff;
 }
 
-
+/* Responsive Styles */
 @media screen and (max-width: 768px) {
     nav {
         flex-direction: column;
@@ -281,6 +409,18 @@ footer {
         display: block;
         align-self: flex-end;
         margin-top: -40px;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+    }
+
+    .dark-mode-toggle {
+        margin-left: 0;
+        margin-top: 10px;
+        align-self: flex-end;
+        position: absolute;
+        top: 10px;
+        right: 70px;
     }
 
     .responsive .nav-links {
@@ -295,12 +435,18 @@ footer {
         font-size: 1.2em;
     }
 
-     .footer-content {
+    .footer-content {
         flex-direction: column;
     }
 
     .footer-section {
         margin-bottom: 30px;
     }
+
+    .tag {
+        font-size: 0.7em;
+        padding: 1px 6px;
+    }
+}
 
 }
