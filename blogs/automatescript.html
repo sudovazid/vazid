@@ -6,6 +6,17 @@
         <title>VAZID - DevOps Engineer, Web Developer & ML Ops Enthusiast</title>
         <link rel="stylesheet" href="../css/styles.css" />
         <link rel="stylesheet" href="../css/blog.css" />
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css" rel="stylesheet" />
+        <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/plugins/toolbar/prism-toolbar.min.css"
+            rel="stylesheet" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-core.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/plugins/autoloader/prism-autoloader.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/plugins/toolbar/prism-toolbar.min.js"></script>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css" rel="stylesheet" />
+        <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/plugins/toolbar/prism-toolbar.min.css"
+            rel="stylesheet" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
         <link rel="icon" href="../images/favicon-16x16.png" sizes="16x16" type="image/png" />
         <link rel="icon" href="../images/favicon-16x16.png" sizes="32x32" type="image/png" />
@@ -32,7 +43,7 @@
                     </li>
                     <li><a href="../pages/aboutme.html">CONNECT WITH ME</a></li>
                     <li class="dropdown">
-                        <button class="dropbtn">CHECK MY <strong>BLOGS</strong></button>
+                        <a href="#" class="dropbtn">CHECK MY <strong>BLOGS</strong></a>
                         <div class="dropdown-content">
                             <a href="#">Linux</a>
                             <a href="#">Infra</a>
@@ -76,14 +87,13 @@
                         manages the log files for you.
                     </p>
 
-                    
-
-            
                     <blockquote>
                         <p>This is a Bash Script you can use to update your system and take logs.</p>
                     </blockquote>
 
-                    <pre><code>#!/bin/bash
+                    <pre class="language-bash">
+                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+<code>#!/bin/bash
 
 # Define constants and configurations
 RELEASE_FILE="/etc/os-release"
@@ -191,61 +201,83 @@ else
 fi
 
 log_message "-----------------System update completed-----------------"           </code></pre>
-                   <h2>Overview of the Script</h2>
+                    <h2>Overview of the Script</h2>
                     <p>
                         The script I created is designed to automatically update system packages on different Linux
                         distributions like Arch, APT-based systems (such as Ubuntu or Debian), and RedHat-based systems
                         (like Fedora and CentOS). It also logs each update, so you have a record of what changes were
                         made.
-                    </p> 
-                    
+                    </p>
+
                     <h2>Detailed Script Breakdown</h2>
                     <h3>Identifying the Operating System</h3>
-                    <p>The script begins by determining which Linux distribution you're using by checking the contents of /etc/os-release. Depending on the OS, it runs the appropriate update commands.</p>
-                    <pre><code>RELEASE_FILE="/etc/os-release"
+                    <p>
+                        The script begins by determining which Linux distribution you're using by checking the contents
+                        of /etc/os-release. Depending on the OS, it runs the appropriate update commands.
+                    </p>
+                    <pre
+                        class="language-bash"><button class="copy-button" onclick="copyCode(this)">Copy</button><code>RELEASE_FILE="/etc/os-release"
 LOG_DIR="/var/log/system_updates"
                     
 if grep -q "Arch" "$RELEASE_FILE"; then
 	echo "--------------Updating Arch Linux---------------"
 	sudo pacman -Syu --noconfirm
 fi</code></pre>
-                    
+
                     <h3>Logging System Updates</h3>
-                    <p>To keep track of the updates, I added a logging mechanism that records each step in a log file stored in /var/log/system_updates/. This ensures you can review what changes were made at any time.</p>
-                    <pre><code>LOG_FILE="$LOG_DIR/system_update_$DATE.log"
+                    <p>
+                        To keep track of the updates, I added a logging mechanism that records each step in a log file
+                        stored in /var/log/system_updates/. This ensures you can review what changes were made at any
+                        time.
+                    </p>
+                    <pre class="language-bash">
+                    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+<code>LOG_FILE="$LOG_DIR/system_update_$DATE.log"
 
 log_message() {
     local message="$1"
     echo "$(date '+%Y-%m-%d %H:%M:%S') - $message" | sudo tee -a "$LOG_FILE"
 }</code></pre>
-               
-                
+
                     <h2>Setting Up the Script</h2>
                     <h3>Moving the Script to /usr/local/bin</h3>
-                    <p>After writing the script, you can move it to /usr/local/bin and rename it to something simple, like update, so you can easily run it from the terminal with just one command.</p>
-                    <pre><code>sudo cp update.sh /usr/local/bin/update
+                    <p>
+                        After writing the script, you can move it to /usr/local/bin and rename it to something simple,
+                        like update, so you can easily run it from the terminal with just one command.
+                    </p>
+                    <pre
+                        class="language-bash"><button class="copy-button" onclick="copyCode(this)">Copy</button><code>sudo cp update.sh /usr/local/bin/update
 sudo chown root:root /usr/local/bin/update
 sudo chmod +x /usr/local/bin/update</code></pre>
-                
+
                     <h2>Automating the Script with Cron</h2>
-                    <p>To ensure your system stays updated without manual intervention, you can schedule the script to run daily using a cron job. This example shows how to set it up.</p>
-                    <pre><code>sudo crontab -e</code></pre>
+                    <p>
+                        To ensure your system stays updated without manual intervention, you can schedule the script to
+                        run daily using a cron job. This example shows how to set it up.
+                    </p>
+                    <pre
+                        class="language-bash"><button class="copy-button" onclick="copyCode(this)">Copy</button><code>sudo crontab -e</code></pre>
                     <p>Add the following line:</p>
-                <pre><code>0 0 * * * /usr/local/bin/update</code></pre>
+                    <pre
+                        class="language-bash"><button class="copy-button" onclick="copyCode(this)">Copy</button><code>0 0 * * * /usr/local/bin/update</code></pre>
                     <p>This command will execute the update script every day at midnight (00:00).</p>
-                    
+
                     <h2>Managing Log Files</h2>
-                    <p>Over time, the log files can accumulate, so I included a cron job to automatically delete logs older than 30 days. Here's how you can set it up:</p>
-                    <pre><code>0 0 * * * find /var/log/system_updates/ -type f -mtime +30 -exec rm {} \;</code></pre>
-                
+                    <p>
+                        Over time, the log files can accumulate, so I included a cron job to automatically delete logs
+                        older than 30 days. Here's how you can set it up:
+                    </p>
+                    <pre
+                        class="language-bash"><button class="copy-button" onclick="copyCode(this)">Copy</button><code>0 0 * * * find /var/log/system_updates/ -type f -mtime +30 -exec rm {} \;</code></pre>
+
                     <h2>Conclusion</h2>
-                    <p>By automating your system updates with this script, you can save time and ensure your Linux system is always secure and up-to-date. Give it a try and let me know how it works for you!<br>
-                    Have any questions or suggestions? Drop a message on email, and don't forget to share this post with your fellow Linux enthusiasts!</p>
-                
+                    <p>
+                        By automating your system updates with this script, you can save time and ensure your Linux
+                        system is always secure and up-to-date. Give it a try and let me know how it works for you!<br />
+                        Have any questions or suggestions? Drop a message on email, and don't forget to share this post
+                        with your fellow Linux enthusiasts!
+                    </p>
                 </div>
-                
-                
-                
 
                 <footer class="blog-footer">
                     <div class="blog-tags">
@@ -268,8 +300,12 @@ sudo chmod +x /usr/local/bin/update</code></pre>
             <div class="footer-content">
                 <div class="footer-section">
                     <h3>About VAZID</h3>
-                    <p><b>VAZID</b> is a Freelance DevOps engineer,<br> Web developer,<br> Web designer,<br> and data engineer.</p>
-
+                    <p>
+                        <b>VAZID</b> is a Freelance DevOps engineer,<br />
+                        Web developer,<br />
+                        Web designer,<br />
+                        and data engineer.
+                    </p>
                 </div>
                 <div class="footer-section">
                     <h3>Quick Links</h3>
@@ -307,6 +343,29 @@ sudo chmod +x /usr/local/bin/update</code></pre>
                     x.style.display = "flex";
                 }
             }
+            function toggleDarkMode() {
+                document.body.classList.toggle("dark-mode");
+            }
+
+            function copyCode(button) {
+                const pre = button.parentElement;
+                const code = pre.querySelector("code");
+                const range = document.createRange();
+                range.selectNode(code);
+                window.getSelection().removeAllRanges();
+                window.getSelection().addRange(range);
+                document.execCommand("copy");
+                window.getSelection().removeAllRanges();
+
+                // Change button text temporarily
+                const originalText = button.textContent;
+                button.textContent = "Copied!";
+                setTimeout(() => {
+                    button.textContent = originalText;
+                }, 2000);
+            }
+
+            Prism.plugins.autoloader.languages_path = "https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/";
 
             const darkModeToggle = document.getElementById("dark-mode-toggle");
             darkModeToggle.addEventListener("click", () => {
@@ -314,5 +373,14 @@ sudo chmod +x /usr/local/bin/update</code></pre>
                 darkModeToggle.classList.toggle("dark-mode");
             });
         </script>
+        <script>
+            document.addEventListener("DOMContentLoaded", (event) => {
+                Prism.highlightAll();
+            });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-core.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/plugins/autoloader/prism-autoloader.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/plugins/toolbar/prism-toolbar.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js"></script>
     </body>
 </html>
