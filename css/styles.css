@@ -269,7 +269,9 @@ main {
 .dark-mode .social-icons a:hover {
     color: #2196f3;
 }
-
+.dark-mode .footer-section p{
+    color:#f1f1f1;
+}
 /* Tag Styles */
 .tag {
     display: inline-block;
