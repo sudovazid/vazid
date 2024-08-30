@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>VAZID - DevOps Engineer, Web Developer & ML Ops Enthusiast</title>
+        <link rel="stylesheet" href="../css/styles.css" />
+        <link rel="stylesheet" href="../css/blog.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+        <link rel="icon" href="../images/favicon-16x16.png" sizes="16x16" type="image/png" />
+        <link rel="icon" href="../images/favicon-16x16.png" sizes="32x32" type="image/png" />
+        <link rel="icon" href="../images/favicon-32x32.png" sizes="48x48" type="image/png" />
+        <link rel="apple-touch-icon" href="../images/apple-touch-icon.png" />
+        <link rel="icon" href="../images/favicon.ico" type="image/x-icon" />
+        <link rel="android-chrome-icon" href="../images/android-chrome-192x192.png" />
+        <link rel="android-chrome-icon" href="../images/android-chrome-512x512.png" />
+    </head>
+    <body>
+        <header>
+            <nav>
+                <div class="logo">
+                    <a href="index.html">
+                        <!-- Light Mode Logo -->
+                        <img src="../images/light-logo.png" alt="VAZID Logo Light" class="logo-light" />
+                        <!-- Dark Mode Logo -->
+                        <img src="../images/dark-logo.png" alt="VAZID Logo Dark" class="logo-dark" />
+                    </a>
+                </div>
+                <ul class="nav-links">
+                    <li>
+                        <a href="../pages/project.html">MY CURRENT <strong>PROJECTS</strong></a>
+                    </li>
+                    <li><a href="../pages/aboutme.html">CONNECT WITH ME</a></li>
+                    <li class="dropdown">
+                        <button class="dropbtn">CHECK MY <strong>BLOGS</strong></button>
+                        <div class="dropdown-content">
+                            <a href="#">Linux</a>
+                            <a href="#">Infra</a>
+                            <a href="#">DevOps</a>
+                            <a href="#">Monitoring</a>
+                            <a href="#">Cloud</a>
+                            <a href="#">Data science</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="../pages/soon.html">TAKE <strong>QUIZ</strong></a>
+                    </li>
+                </ul>
+                <button id="dark-mode-toggle" class="dark-mode-toggle">
+                    <i class="fas fa-sun"></i>
+                    <i class="fas fa-moon"></i>
+                </button>
+                <div class="icon" onclick="toggleMenu()">☰</div>
+            </nav>
+        </header>
+
+        <main class="blog-content">
+            <article class="blog-post">
+                <header class="blog-header">
+                    <h1 class="blog-title">Automate Your System Updates with a Custom Bash Script</h1>
+                    <div class="blog-meta">
+                        <span class="blog-date"
+                            ><i class="fas fa-calendar-alt"></i> Published on:
+                            <time datetime="2024-08-30">August 30, 2024</time></span
+                        >
+                        <span class="blog-author"><i class="fas fa-user"></i> By: VAZID</span>
+                        <span class="blog-category"><i class="fas fa-folder"></i> Category: Linux</span>
+                    </div>
+                </header>
+
+                <div class="blog-body">
+                    <p>
+                        Keeping your Linux system up-to-date is crucial for security and performance, but it can be
+                        tedious to manually update your system regularly. In this blog, I’ll show you how to automate
+                        this process with a custom Bash script that updates your system, logs the changes, and even
+                        manages the log files for you.
+                    </p>
+
+                    
+
+            
+                    <blockquote>
+                        <p>This is a Bash Script you can use to update your system and take logs.</p>
+                    </blockquote>
+
+                    <pre><code>#!/bin/bash
+
+# Define constants and configurations
+RELEASE_FILE="/etc/os-release"
+LOG_DIR="/var/log/system_updates"
+DATE=$(date '+%Y-%m%d_%H-%M-%S')
+LOG_FILE="$LOG_DIR/system_update_$DATE.log"
+
+# Function to log messages with timestamps
+log_message() {
+    local message="$1"
+    echo "$(date '+%Y-%m-%d %H:%M:%S') - $message" | sudo tee -a "$LOG_FILE"
+}
+
+# Function to check and create log directory if it doesn't exist
+create_log_directory() {
+    if [ ! -d "$LOG_DIR" ]; then
+        log_message "Log directory does not exist. Creating now..."
+        if sudo mkdir -p "$LOG_DIR"; then
+            log_message "Log directory created at $LOG_DIR"
+        else
+            log_message "Failed to create log directory. Exiting."
+            exit 1
+        fi
+    else
+        log_message "Log directory already exists: $LOG_DIR"
+    fi
+}
+
+# Function to check if the script is run as a superuser
+check_superuser() {
+    if [ "$EUID" -ne 0 ]; then
+        echo "This script must be run as root. Please use sudo." >&2
+        exit 1
+    fi
+}
+
+# Function to update Arch Linux systems
+update_arch() {
+    log_message "--------------Updating Arch Linux---------------"
+    if sudo pacman -Syu --noconfirm 2>&1 | sudo tee -a "$LOG_FILE"; then
+        log_message "Arch Linux system updated successfully."
+    else
+        log_message "Error updating Arch Linux system."
+    fi
+}
+
+# Function to update APT-based systems
+update_apt() {
+    log_message "-------------Updating APT-based system-------------"
+    if sudo apt update -y 2>&1 | sudo tee -a "$LOG_FILE"; then
+        log_message "APT package list updated successfully."
+    else
+        log_message "Error updating APT package list."
+    fi
+
+    if sudo apt upgrade -y 2>&1 | sudo tee -a "$LOG_FILE"; then
+        log_message "APT packages upgraded successfully."
+    else
+        log_message "Error upgrading APT packages."
+    fi
+
+    if sudo apt dist-upgrade -y 2>&1 | sudo tee -a "$LOG_FILE"; then
+        log_message "APT distribution packages upgraded successfully."
+    else
+        log_message "Error with APT distribution upgrade."
+    fi
+}
+
+# Function to update RedHat-based systems
+update_redhat() {
+    log_message "-------------Updating RedHat-based system------------"
+    if sudo dnf update -y 2>&1 | sudo tee -a "$LOG_FILE"; then
+        log_message "DNF update completed successfully."
+    else
+        log_message "Error during DNF update."
+    fi
+
+    if sudo dnf upgrade -y 2>&1 | sudo tee -a "$LOG_FILE"; then
+        log_message "DNF upgrade completed successfully."
+    else
+        log_message "Error during DNF upgrade."
+    fi
+}
+
+# Main script logic
+
+# Ensure the script is run as root
+check_superuser
+
+# Create log directory if it doesn't exist
+create_log_directory
+
+log_message "------Starting System Update---------------"
+
+# Identify the OS and perform the update
+if grep -qi "arch" "$RELEASE_FILE"; then
+    update_arch
+elif [ -d /etc/apt ]; then
+    update_apt
+elif grep -qiE "redhat|fedora|centos" "$RELEASE_FILE"; then
+    update_redhat
+else
+    log_message "Unsupported or unrecognized Linux distribution. Exiting."
+    exit 1
+fi
+
+log_message "-----------------System update completed-----------------"           </code></pre>
+                   <h2>Overview of the Script</h2>
+                    <p>
+                        The script I created is designed to automatically update system packages on different Linux
+                        distributions like Arch, APT-based systems (such as Ubuntu or Debian), and RedHat-based systems
+                        (like Fedora and CentOS). It also logs each update, so you have a record of what changes were
+                        made.
+                    </p> 
+                    
+                    <h2>Detailed Script Breakdown</h2>
+                    <h3>Identifying the Operating System</h3>
+                    <p>The script begins by determining which Linux distribution you're using by checking the contents of /etc/os-release. Depending on the OS, it runs the appropriate update commands.</p>
+                    <pre><code>RELEASE_FILE="/etc/os-release"
+LOG_DIR="/var/log/system_updates"
+                    
+if grep -q "Arch" "$RELEASE_FILE"; then
+	echo "--------------Updating Arch Linux---------------"
+	sudo pacman -Syu --noconfirm
+fi</code></pre>
+                    
+                    <h3>Logging System Updates</h3>
+                    <p>To keep track of the updates, I added a logging mechanism that records each step in a log file stored in /var/log/system_updates/. This ensures you can review what changes were made at any time.</p>
+                    <pre><code>LOG_FILE="$LOG_DIR/system_update_$DATE.log"
+
+log_message() {
+    local message="$1"
+    echo "$(date '+%Y-%m-%d %H:%M:%S') - $message" | sudo tee -a "$LOG_FILE"
+}</code></pre>
+               
+                
+                    <h2>Setting Up the Script</h2>
+                    <h3>Moving the Script to /usr/local/bin</h3>
+                    <p>After writing the script, you can move it to /usr/local/bin and rename it to something simple, like update, so you can easily run it from the terminal with just one command.</p>
+                    <pre><code>sudo cp update.sh /usr/local/bin/update
+sudo chown root:root /usr/local/bin/update
+sudo chmod +x /usr/local/bin/update</code></pre>
+                
+                    <h2>Automating the Script with Cron</h2>
+                    <p>To ensure your system stays updated without manual intervention, you can schedule the script to run daily using a cron job. This example shows how to set it up.</p>
+                    <pre><code>sudo crontab -e</code></pre>
+                    <p>Add the following line:</p>
+                <pre><code>0 0 * * * /usr/local/bin/update</code></pre>
+                    <p>This command will execute the update script every day at midnight (00:00).</p>
+                    
+                    <h2>Managing Log Files</h2>
+                    <p>Over time, the log files can accumulate, so I included a cron job to automatically delete logs older than 30 days. Here's how you can set it up:</p>
+                    <pre><code>0 0 * * * find /var/log/system_updates/ -type f -mtime +30 -exec rm {} \;</code></pre>
+                
+                    <h2>Conclusion</h2>
+                    <p>By automating your system updates with this script, you can save time and ensure your Linux system is always secure and up-to-date. Give it a try and let me know how it works for you!<br>
+                    Have any questions or suggestions? Drop a message on email, and don't forget to share this post with your fellow Linux enthusiasts!</p>
+                
+                </div>
+                
+                
+                
+
+                <footer class="blog-footer">
+                    <div class="blog-tags">
+                        <i class="fas fa-tags"></i> Tags:
+                        <a href="#" class="tag">DevOps</a>
+                        <a href="#" class="tag">Linux</a>
+                        <a href="#" class="tag">Tutorial</a>
+                    </div>
+                    <div class="blog-share">
+                        <span>Share this post:</span>
+                        <a href="#" class="share-icon"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="share-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="share-icon"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </footer>
+            </article>
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About VAZID</h3>
+                    <p><b>VAZID</b> is a Freelance DevOps engineer,<br> Web developer,<br> Web designer,<br> and data engineer.</p>
+
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Articles</a></li>
+                        <li><a href="#">Categories</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <p>Email: sheikh.vazid.ahmed@gmail.com</p>
+                    <p>Current Location: Mangalore, Karnataka</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="social-icons">
+                    <a href="#" aria-label="Facebook"></a>
+                    <a href="#" aria-label="Twitter"></a>
+                    <a href="#" aria-label="Instagram"></a>
+                    <a href="#" aria-label="LinkedIn"></a>
+                </div>
+                <p>© 2024 VAZID. All rights reserved.</p>
+                <p>Designed by VAZID</p>
+            </div>
+        </footer>
+
+        <script>
+            function toggleMenu() {
+                var x = document.querySelector(".nav-links");
+                if (x.style.display === "flex") {
+                    x.style.display = "none";
+                } else {
+                    x.style.display = "flex";
+                }
+            }
+
+            const darkModeToggle = document.getElementById("dark-mode-toggle");
+            darkModeToggle.addEventListener("click", () => {
+                document.body.classList.toggle("dark-mode");
+                darkModeToggle.classList.toggle("dark-mode");
+            });
+        </script>
+    </body>
+</html>
