@@ -17,19 +17,35 @@
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 40px;
 }
-
+/* Project Styles */
 .project {
-    background-color: #f1f1f1;
+    background-color: #f1f1f1;  /* Initial background color */
     border: 1px solid;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.51);
     padding: 20px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, color 0.3s ease;
 }
 
+/* Hover effect on the entire project box */
 .project:hover {
     transform: translateY(-5px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    background-color: #0000ff;  /* Blue background on hover */
+    color: #ffffff;  /* Change all text color to white on hover */
 }
+
+/* Ensure all text inside the project box changes color */
+.project:hover .project-name,
+.project:hover .status,
+.project:hover .project-link {
+    color: #ffffff;  /* White text color */
+}
+/* For additional hover effects on links */
+.project-link:hover i {
+    transform: translateX(5px);
+}
+
+
 
 .project-name {
     font-size: 1.5rem;
@@ -71,14 +87,13 @@
     transition: color 0.3s ease;
 }
 
-.project-link:hover {
-    color: #004499;
-}
+
 
 .project-link i {
     margin-left: 5px;
     transition: transform 0.3s ease;
 }
+
 
 .project-link:hover i {
     transform: translateX(5px);
