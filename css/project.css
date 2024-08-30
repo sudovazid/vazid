@@ -1,60 +1,136 @@
+/* Project Page Specific Styles */
+.project-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
 
-main {
-    padding: 20px;
+.page-title {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    text-align: center;
+    color: #333;
 }
 
 .project-list {
-    margin: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
 }
 
 .project {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 0;
-    border-bottom: 1px solid blue;
+    background-color: #f1f1f1;
+    border: 1px solid;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.51);
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
 .project-name {
-    font-size: 3em;
-    color: #000;
-    flex-grow: 7; /* Allow the project name to take up more space */
-    margin-right: 100px; /* Add space between project name and status */
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #333;
 }
 
 .status {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.9rem;
     font-weight: bold;
     text-transform: uppercase;
-    font-size: 2em;
+    margin-bottom: 15px;
 }
 
 .launched {
-    color: orange;
+    background-color: #4CAF50;
+    color: white;
 }
 
 .coming-soon {
-    color: red;
+    background-color: #FFC107;
+    color: #333;
 }
 
 .in-progress {
-    color: green;
+    background-color: #2196F3;
+    color: white;
 }
 
+.project-link {
+    display: inline-block;
+    margin-top: 15px;
+    color: #0066cc;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
 
+.project-link:hover {
+    color: #004499;
+}
+
+.project-link i {
+    margin-left: 5px;
+    transition: transform 0.3s ease;
+}
+
+.project-link:hover i {
+    transform: translateX(5px);
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #121212;
+    color: #f1f1f1;
+}
+
+body.dark-mode .page-title {
+    color: #f1f1f1;
+}
+
+body.dark-mode .project {
+    background-color: #1e1e1e;
+    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .project-name {
+    color: #f1f1f1;
+}
+
+body.dark-mode .status.coming-soon {
+    background-color: #856404;
+    color: #fff3cd;
+}
+
+body.dark-mode .project-link {
+    color: #4da6ff;
+}
+
+body.dark-mode .project-link:hover {
+    color: #80bfff;
+}
+
+/* Responsive Styles */
 @media screen and (max-width: 768px) {
+    .project-list {
+        grid-template-columns: 1fr;
+    }
 
     .project {
-        flex-direction: column; /* Stack project name and status vertically */
-        align-items: flex-start; /* Align items to the start */
+        padding: 15px;
     }
 
     .project-name {
-        margin-right: 0;
-        font-size: 2em;
-        margin-bottom: 10px; /* Add spacing between name and status */
+        font-size: 1.3rem;
     }
 
     .status {
-        font-size: 1.5em;
+        font-size: 0.8rem;
     }
 }

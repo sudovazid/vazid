@@ -54,19 +54,72 @@
             </nav>
         </header>
         <div>
-            <section class="content">
-                <main>
-                    <div class="intro-text">
-                        <p>
-                            <b>SHEIKH VAZID AHMED</b>, A freelance DevOps Engineer, Web Developer, Web Designer, and
-                            Data engineer from Mangalore, Karnataka. <br /><br />
-                            CURRENTLY EXPLORING MLOPS AND DATA ANALYSIS TO DEEPEN MY EXPERTISE IN DATA. <br /><br />
-                            I AM CONSTANTLY WORKING ON NEW PROJECTS TO SOLVE REAL-WORLD PROBLEMS AND IMPROVE DAILY
-                            WORKFLOWS. VISIT MY PROJECT PAGE TO SEE WHAT I'M WORKING ON.
-                        </p>
+            
+               <main class="contact-container">
+        <h1 class="page-title">Contact Me</h1>
+        <p class="contact-intro">In case of urgent project deployment, send a direct message to <br> <br>
+            <a href="mailto:sheikh.vazid.ahmed@gmail.com">sheikh.vazid.ahmed@gmail.com</a></p>
+        
+        <form id="contact-form" class="contact-form">
+            <div class="form-group">
+                <label for="name">Name *</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Email address *</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="summary">Summary *</label>
+                <textarea id="summary" name="summary" required></textarea>
+            </div>
+            
+            <div class="form-group">
+                <label for="type">Type *</label>
+                <select id="type" name="type" required>
+                    <option value="">Select a type</option>
+                    <option value="Cloud Deployment">Cloud Deployment</option>
+                    <option value="DevOps Improvement">DevOps Improvement</option>
+                    <option value="DevSecOps Deployment">DevSecOps Deployment</option>
+                    <option value="Web Designing">Web Designing</option>
+                    <option value="Web Development">Web Development</option>
+                    <option value="Training">Training</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="priority">Priority *</label>
+                <div class="priority-slider">
+                    <input type="range" id="priority" name="priority" min="1" max="5" value="3" required>
+                    <div class="priority-labels">
+                        <span>Very low</span>
+                        <span>Very high</span>
                     </div>
-                </main>
-            </section>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="start-date">Start Date</label>
+                <input type="date" id="start-date" name="start-date">
+            </div>
+            
+            <div class="form-group">
+                <label for="end-date">End Date</label>
+                <input type="date" id="end-date" name="end-date">
+            </div>
+            
+            <div class="form-group">
+                <label for="details">More details</label>
+                <textarea id="details" name="details"></textarea>
+            </div>
+            
+            <button type="submit" class="submit-btn">Submit</button>
+        </form>
+    </main>
+           
         </div>
 
         <footer>
@@ -103,15 +156,7 @@
             </div>
         </footer>
 
-        <script>
-            function toggleMenu() {
-                var x = document.querySelector(".nav-links");
-                if (x.style.display === "flex") {
-                    x.style.display = "none";
-                } else {
-                    x.style.display = "flex";
-                }
-            }
-        </script>
+           <script src="../js/scripts.js"></script>
+
     </body>
 </html>
