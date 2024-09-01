@@ -91,9 +91,9 @@
                         <p>This is a Bash Script you can use to update your system and take logs.</p>
                     </blockquote>
 
-                    <pre class="language-bash">
+                    <pre >
                     <button class="copy-button" onclick="copyCode(this)">Copy</button>
-<code>#!/bin/bash
+<code class="language-bash">#!/bin/bash
 
 # Define constants and configurations
 RELEASE_FILE="/etc/os-release"
@@ -215,8 +215,7 @@ log_message "-----------------System update completed-----------------"         
                         The script begins by determining which Linux distribution you're using by checking the contents
                         of /etc/os-release. Depending on the OS, it runs the appropriate update commands.
                     </p>
-                    <pre
-                        class="language-bash"><button class="copy-button" onclick="copyCode(this)">Copy</button><code>RELEASE_FILE="/etc/os-release"
+                    <pre><button class="copy-button" onclick="copyCode(this)">Copy</button><code class="language-bash">RELEASE_FILE="/etc/os-release"
 LOG_DIR="/var/log/system_updates"
                     
 if grep -q "Arch" "$RELEASE_FILE"; then
@@ -230,9 +229,9 @@ fi</code></pre>
                         stored in /var/log/system_updates/. This ensures you can review what changes were made at any
                         time.
                     </p>
-                    <pre class="language-bash">
+                    <pre>
                     <button class="copy-button" onclick="copyCode(this)">Copy</button>
-<code>LOG_FILE="$LOG_DIR/system_update_$DATE.log"
+<code class="language-bash">LOG_FILE="$LOG_DIR/system_update_$DATE.log"
 
 log_message() {
     local message="$1"
@@ -245,8 +244,7 @@ log_message() {
                         After writing the script, you can move it to /usr/local/bin and rename it to something simple,
                         like update, so you can easily run it from the terminal with just one command.
                     </p>
-                    <pre
-                        class="language-bash"><button class="copy-button" onclick="copyCode(this)">Copy</button><code>sudo cp update.sh /usr/local/bin/update
+                    <pre ><button class="copy-button" onclick="copyCode(this)">Copy</button><code class="language-bash">sudo cp update.sh /usr/local/bin/update
 sudo chown root:root /usr/local/bin/update
 sudo chmod +x /usr/local/bin/update</code></pre>
 
@@ -255,11 +253,9 @@ sudo chmod +x /usr/local/bin/update</code></pre>
                         To ensure your system stays updated without manual intervention, you can schedule the script to
                         run daily using a cron job. This example shows how to set it up.
                     </p>
-                    <pre
-                        class="language-bash"><button class="copy-button" onclick="copyCode(this)">Copy</button><code>sudo crontab -e</code></pre>
+                    <pre ><button class="copy-button" onclick="copyCode(this)">Copy</button><code class="language-bash">sudo crontab -e</code></pre>
                     <p>Add the following line:</p>
-                    <pre
-                        class="language-bash"><button class="copy-button" onclick="copyCode(this)">Copy</button><code>0 0 * * * /usr/local/bin/update</code></pre>
+                    <pre ><button class="copy-button" onclick="copyCode(this)">Copy</button><code class="language-bash">0 0 * * * /usr/local/bin/update</code></pre>
                     <p>This command will execute the update script every day at midnight (00:00).</p>
 
                     <h2>Managing Log Files</h2>
@@ -267,8 +263,7 @@ sudo chmod +x /usr/local/bin/update</code></pre>
                         Over time, the log files can accumulate, so I included a cron job to automatically delete logs
                         older than 30 days. Here's how you can set it up:
                     </p>
-                    <pre
-                        class="language-bash"><button class="copy-button" onclick="copyCode(this)">Copy</button><code>0 0 * * * find /var/log/system_updates/ -type f -mtime +30 -exec rm {} \;</code></pre>
+                    <pre ><button class="copy-button" onclick="copyCode(this)">Copy</button><code class="language-bash">0 0 * * * find /var/log/system_updates/ -type f -mtime +30 -exec rm {} \;</code></pre>
 
                     <h2>Conclusion</h2>
                     <p>
