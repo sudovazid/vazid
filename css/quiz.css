@@ -1,4 +1,3 @@
-
 .content {
     flex: 1;
     display: flex;
@@ -24,9 +23,9 @@ p {
 }
 
 .card {
-    background-color: #0000FF;
+    background-color: #0000ff;
     color: white;
-    border-radius: 50px;
+
     padding: 20px;
     margin: 15px;
     width: calc(33.333% - 30px);

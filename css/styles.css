@@ -13,6 +13,9 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    max-width: 80%; /* Added this line */
+    margin: 0 auto; /* Added this line */
+    padding-left,padding-right: 30px; /* Added this line */
 }
 
 /* Header Styles */
@@ -154,6 +157,7 @@ nav {
 
 .hero-content {
     flex: 1;
+    max-width: 600px;
 }
 
 .hero h1 {
@@ -171,7 +175,7 @@ nav {
 }
 
 .hero .intro {
-    font-size: 1.5rem;
+    font-size: 1rem;
     max-width: 100%;
     margin-bottom: 1rem;
     color: #666;
@@ -180,16 +184,16 @@ nav {
 
 .hero .key-skills {
     display: flex;
+    flex-wrap: wrap;
     list-style: none;
     padding: 0;
-    margin: 0;
+    margin: 0 -0.5rem;
 }
 
 .hero .key-skills li {
-    margin-right: 1rem;
+    margin: 0.5rem;
     background-color: #e9ecef;
     padding: 0.5rem 1rem;
-    border-radius: 20px;
     font-size: 0.9rem;
     color: #333;
     transition:
@@ -201,9 +205,12 @@ nav {
     background-color: #000000;
     color: #ffffff;
 }
+
 .hero-image {
     flex: 1;
     text-align: center;
+    max-width: 400px;
+    margin-left: 2rem;
 }
 
 .hero-image img {
@@ -222,7 +229,6 @@ nav {
     padding: 0.8rem 1.5rem;
     margin-right: 1rem;
     margin-bottom: 1rem;
-    border-radius: 5px;
     text-decoration: none;
     font-weight: bold;
     transition:
@@ -238,8 +244,9 @@ nav {
 }
 
 .cta-button.primary:hover {
-    background-color: #0000cc;
-    border-color: #0000cc;
+    background-color: transparent;
+    color: #0000ff;
+    border: 2px solid #0000ff;
 }
 
 .cta-button.secondary {
@@ -254,28 +261,34 @@ nav {
     border-color: #0000ff;
 }
 
-/* Dark Mode Styles */
+/* Dark Mode Hero Styles */
 body.dark-mode .cta-button.primary {
     background-color: #0000ff;
-    color: #1a1a1a;
+    color: #00000;
     border-color: #0000ff;
 }
 
 body.dark-mode .cta-button.primary:hover {
-    background-color: #3a7acc;
-    border-color: #3a7acc;
+    background-color: transparent;
+    color: #fff;
+    border-color: #0000ff;
 }
 
 body.dark-mode .cta-button.secondary {
-    color: #0000ff;
+    color: #ffffff;
     border-color: #0000ff;
 }
 
 body.dark-mode .cta-button.secondary:hover {
     background-color: #0000ff;
-    color: #1a1a1a;
+    color: #ffffff;
     border-color: #0000ff;
 }
+body.dark-mode .hero .key-skills li:hover {
+    background-color: #000000;
+    color: #ffffff;
+}
+
 /* Main Content Styles */
 main {
     flex: 1;
@@ -330,7 +343,90 @@ main {
     font-size: 1.5em;
     cursor: pointer;
 }
+/* About Me Page Styles */
+.about-me-body {
+    font-family: "Courier New", Courier, monospace;
+    line-height: 1.6;
+    color: #000;
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #ffffff;
+}
 
+.about-me-body h1 {
+    color: #000;
+    padding: 10px;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+
+.about-me-body h2 {
+    color: #fff;
+    padding: 10px;
+}
+
+.about-me-body p,
+.about-me-body li,
+.about-me-body ul {
+    padding-right: 60px;
+    padding-left: 60px;
+    font-size: 2vh;
+}
+
+.about-me-body .section {
+    margin-bottom: 10px;
+}
+
+.about-me-body .blue-bar {
+    background-color: #0000ff;
+    color: black;
+    padding: 10px;
+    margin: 20px 0;
+}
+
+.about-me-body .hire-me {
+    background-color: #0000ff;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 20px;
+    transition:
+        background-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.about-me-body .hire-me:hover {
+    background-color: #0000cc;
+    transform: translateY(-3px);
+}
+
+.about-me-body .social-links {
+    display: flex;
+    justify-content: space-between;
+    max-width: 100%;
+}
+
+.about-me-body .social-link {
+    background-color: #0000ff;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    flex-grow: 1;
+    text-align: center;
+    margin: 0 5px;
+    transition:
+        background-color 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.about-me-body .social-link:hover {
+    background-color: #0000cc;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
 /* Dark Mode Toggle */
 .dark-mode-toggle {
     background: none;
@@ -455,13 +551,52 @@ body.dark-mode .hero .key-skills li {
     color: #f1f1f1;
 }
 
+/* Dark Mode Styles for About Me Page */
+.dark-mode .about-me-body {
+    background-color: #333;
+    color: #f1f1f1;
+}
+
+.dark-mode .about-me-body h1 {
+    color: #f1f1f1;
+    border-top-color: #444;
+    border-bottom-color: #444;
+}
+
+.dark-mode .about-me-body h2 {
+    color: #f1f1f1;
+}
+
+.dark-mode .about-me-body .blue-bar {
+    background-color: #0000cc;
+    color: #f1f1f1;
+}
+
+.dark-mode .about-me-body .hire-me {
+    background-color: #0000cc;
+    color: #f1f1f1;
+}
+
+.dark-mode .about-me-body .hire-me:hover {
+    background-color: #0000ff;
+}
+
+.dark-mode .about-me-body .social-link {
+    background-color: #0000cc;
+    color: #f1f1f1;
+}
+
+.dark-mode .about-me-body .social-link:hover {
+    background-color: #0000ff;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+}
+
 /* Tag Styles */
 .tag {
     display: inline-block;
     background-color: #e0e0e0;
     color: #333;
     padding: 2px 8px;
-    border-radius: 15px;
     font-size: 0.4em;
     margin-right: 5px;
     margin-top: 5px;
@@ -570,8 +705,45 @@ footer {
     color: #0000ff;
 }
 
+@media screen and (max-width: 1024px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 3rem 1.5rem;
+    }
+
+    .hero-content {
+        max-width: 100%;
+    }
+
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero .intro {
+        font-size: 0.9rem;
+    }
+
+    .hero .key-skills {
+        justify-content: center;
+    }
+
+    .hero-image {
+        margin-left: 0;
+        margin-top: 2rem;
+        max-width: 300px;
+    }
+
+    .cta-buttons {
+        justify-content: center;
+    }
+}
 /* Responsive Styles */
 @media screen and (max-width: 768px) {
+    body {
+        max-width: 95%; /* Updated this line */
+        padding: 15px; /* Updated this line */
+    }
     .logo img {
         max-height: 40px; /* Smaller logo for mobile */
     }
@@ -662,35 +834,106 @@ footer {
         padding: 0.8em 1.2em;
     }
     .hero {
-        flex-direction: column;
-        text-align: center;
         padding: 2rem 1rem;
     }
 
-    .hero .key-skills {
-        justify-content: center;
-        flex-wrap: wrap;
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero .tagline {
+        font-size: 1.1rem;
+    }
+
+    .hero .intro {
+        font-size: 0.85rem;
     }
 
     .hero .key-skills li {
-        margin-bottom: 0.5rem;
+        font-size: 0.8rem;
+        padding: 0.4rem 0.8rem;
     }
-    .cta-buttons {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+
+    .hero-image {
+        max-width: 250px;
     }
 
     .cta-button {
-        margin-right: 0;
-        width: 200px;
-        text-align: center;
+        padding: 0.7rem 1.2rem;
+        font-size: 0.9rem;
+    }
+    .about-me-body {
+        max-width: 95%;
+        padding: 15px;
+    }
+
+    .about-me-body p,
+    .about-me-body li,
+    .about-me-body ul {
+        padding-right: 20px;
+        padding-left: 20px;
+        font-size: 1.8vh;
+    }
+
+    .about-me-body .social-links {
+        flex-direction: column;
+    }
+
+    .about-me-body .social-link {
+        margin: 5px 0;
     }
 }
 
 @media screen and (max-width: 480px) {
+    body {
+        max-width: 100%; /* Updated this line */
+        padding: 10px; /* Updated this line */
+    }
     pre {
         font-size: 13px;
         padding: 0.2em 02em;
+    }
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero .tagline {
+        font-size: 1rem;
+    }
+
+    .hero .intro {
+        font-size: 0.8rem;
+    }
+
+    .hero .key-skills li {
+        font-size: 0.75rem;
+        padding: 0.3rem 0.6rem;
+    }
+
+    .hero-image {
+        max-width: 200px;
+    }
+
+    .cta-button {
+        padding: 0.6rem 1rem;
+        font-size: 0.8rem;
+        margin-right: 0.5rem;
+    }
+    .about-me-body {
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    .about-me-body p,
+    .about-me-body li,
+    .about-me-body ul {
+        padding-right: 10px;
+        padding-left: 10px;
+        font-size: 1.6vh;
+    }
+
+    .about-me-body h1,
+    .about-me-body h2 {
+        font-size: 1.5em;
     }
 }
