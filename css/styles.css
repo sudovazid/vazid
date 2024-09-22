@@ -8,7 +8,7 @@
 /* Body and Typography */
 body {
     font-family: "Courier New", Courier, monospace;
-    background-color: #f1f1f1;
+    background-color: #ffffff;
     color: #000;
     min-height: 100vh;
     display: flex;
@@ -17,7 +17,7 @@ body {
 
 /* Header Styles */
 header {
-    background-color: #f1f1f1;
+    background-color: #ffffff;
     padding: 20px;
     position: sticky;
     top: 0;
@@ -41,7 +41,7 @@ nav {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 25em;  /* Adjust as needed */
+    font-size: 25em; /* Adjust as needed */
     color: rgba(0, 0, 0, 0.1); /* Light color for background text */
     z-index: -1; /* Ensure it's behind the label */
     pointer-events: none; /* Make sure it doesn't interfere with clicks */
@@ -52,13 +52,14 @@ nav {
     z-index: 1; /* Make sure labels are above the background title */
     font-size: 5.8em;
     margin-bottom: 10px;
-    background-color: #f1f1f1;
+    background-color: #ffffff;
     padding: 20px;
     box-shadow: 0 10px 6px rgba(48, 47, 46, 0.79);
     border: 1px solid #000;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
 }
-
 
 /* Default: Show light mode logo, hide dark mode logo */
 .logo-light {
@@ -119,7 +120,7 @@ nav {
     position: absolute;
     min-width: 160px;
     z-index: 1;
-    background-color: #f1f1f1;
+    background-color: #ffffff;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
@@ -140,6 +141,137 @@ nav {
     display: block;
 }
 
+/* Hero Section Styles */
+.hero {
+    display: flex;
+    align-items: center;
+    padding: 4rem 2rem;
+    background-color: #f8f9fa;
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease;
+}
+
+.hero-content {
+    flex: 1;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.hero .tagline {
+    font-size: 1.2rem;
+    color: #0000ff;
+    margin-bottom: 1rem;
+    transition: color 0.3s ease;
+}
+
+.hero .intro {
+    font-size: 1rem;
+    max-width: 600px;
+    margin-bottom: 1rem;
+    color: #666;
+    transition: color 0.3s ease;
+}
+
+.hero .key-skills {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.hero .key-skills li {
+    margin-right: 1rem;
+    background-color: #e9ecef;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    color: #333;
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease;
+}
+
+.hero-image {
+    flex: 1;
+    text-align: center;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
+
+/* CTA Button Styles */
+.cta-buttons {
+    margin-top: 2rem;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.cta-button.primary {
+    background-color: #0000ff;
+    color: white;
+    border: 2px solid #0000ff;
+}
+
+.cta-button.primary:hover {
+    background-color: #0000cc;
+    border-color: #0000cc;
+}
+
+.cta-button.secondary {
+    background-color: transparent;
+    color: #0000ff;
+    border: 2px solid #0000ff;
+}
+
+.cta-button.secondary:hover {
+    background-color: #0000ff;
+    color: #ffffff;
+    border-color: #0000ff;
+}
+
+/* Dark Mode Styles */
+body.dark-mode .cta-button.primary {
+    background-color: #0000ff;
+    color: #1a1a1a;
+    border-color: #0000ff;
+}
+
+body.dark-mode .cta-button.primary:hover {
+    background-color: #3a7acc;
+    border-color: #3a7acc;
+}
+
+body.dark-mode .cta-button.secondary {
+    color: #0000ff;
+    border-color: #0000ff;
+}
+
+body.dark-mode .cta-button.secondary:hover {
+    background-color: #0000ff;
+    color: #1a1a1a;
+    border-color: #0000ff;
+}
 /* Main Content Styles */
 main {
     flex: 1;
@@ -159,7 +291,7 @@ main {
 .content label {
     font-size: 1.8em;
     margin-bottom: 10px;
-    background-color: #f1f1f1;
+    background-color: #ffffff;
     padding: 20px;
     box-shadow: 0 10px 6px rgba(48, 47, 46, 0.79);
     border: 1px solid #000;
@@ -296,6 +428,29 @@ main {
 .dark-mode .footer-section p {
     color: #f1f1f1;
 }
+
+/*Dark Mode of hero section */
+body.dark-mode .hero {
+    background-color: #1a1a1a;
+}
+
+body.dark-mode .hero h1 {
+    color: #f1f1f1;
+}
+
+body.dark-mode .hero .tagline {
+    color: #4d94ff; /* Lighter blue for dark mode */
+}
+
+body.dark-mode .hero .intro {
+    color: #b0b0b0;
+}
+
+body.dark-mode .hero .key-skills li {
+    background-color: #333;
+    color: #f1f1f1;
+}
+
 /* Tag Styles */
 .tag {
     display: inline-block;
@@ -336,7 +491,7 @@ main {
 
 /* Footer Styles */
 footer {
-    background-color: #f8f8f8;
+    background-color: #ffffff;
     border-top: 1px solid #040404;
     padding: 40px 20px;
     font-family: "Courier New", Courier, monospace;
@@ -501,6 +656,31 @@ footer {
     pre {
         font-size: 14px;
         padding: 0.8em 1.2em;
+    }
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 2rem 1rem;
+    }
+
+    .hero .key-skills {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .hero .key-skills li {
+        margin-bottom: 0.5rem;
+    }
+    .cta-buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cta-button {
+        margin-right: 0;
+        width: 200px;
+        text-align: center;
     }
 }
 

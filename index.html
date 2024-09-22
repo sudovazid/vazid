@@ -3,16 +3,70 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>VAZID - DevOps Engineer, Web Developer & ML Ops Enthusiast</title>
+        <title>
+            VAZID - DevOps Engineer, Web Developer & ML Ops Enthusiast
+        </title>
         <link rel="stylesheet" href="css/styles.css" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-        <link rel="icon" href="images/favicon-16x16.png" sizes="16x16" type="image/png" />
-        <link rel="icon" href="images/favicon-16x16.png" sizes="32x32" type="image/png" />
-        <link rel="icon" href="images/favicon-32x32.png" sizes="48x48" type="image/png" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        />
+        <link
+            rel="icon"
+            href="images/favicon-16x16.png"
+            sizes="16x16"
+            type="image/png"
+        />
+        <link
+            rel="icon"
+            href="images/favicon-16x16.png"
+            sizes="32x32"
+            type="image/png"
+        />
+        <link
+            rel="icon"
+            href="images/favicon-32x32.png"
+            sizes="48x48"
+            type="image/png"
+        />
         <link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
         <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
-        <link rel="android-chrome-icon" href="images/android-chrome-192x192.png" />
-        <link rel="android-chrome-icon" href="images/android-chrome-512x512.png" />
+        <link
+            rel="android-chrome-icon"
+            href="images/android-chrome-192x192.png"
+        />
+        <link
+            rel="android-chrome-icon"
+            href="images/android-chrome-512x512.png"
+        />
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "Person",
+                "name": "Sheikh Vazid Ahmed",
+                "jobTitle": "DevOps Engineer, MLOps & Cloud Solution Architect",
+                "url": "https://vazid.site",
+                "sameAs": [
+                    "https://www.linkedin.com/in/vazid",
+                    "https://github.com/sudovazid"
+                ],
+                "description": "DevOps Engineer, MLOps & Cloud Solution Architect with expertise in Cloud Architecture, DevOps, and Data Science",
+                "knowsAbout": [
+                    "Cloud Architecture",
+                    "DevOps",
+                    "Infrastructure as Code",
+                    "Containerization",
+                    "CI/CD",
+                    "Data Engineer",
+                    "MlOps",
+                    "Data science"
+                ],
+                "memberOf": {
+                    "@type": "Organization",
+                    "name": "**Sheikh Vazid**" // Replace with the company name
+                }
+            }
+        </script>
     </head>
     <body>
         <header>
@@ -20,30 +74,38 @@
                 <div class="logo">
                     <a href="index.html">
                         <!-- Light Mode Logo -->
-                        <img src="images/light-logo.png" alt="VAZID Logo Light" class="logo-light" />
+                        <img
+                            src="images/light-logo.png"
+                            alt="VAZID Logo Light"
+                            class="logo-light"
+                        />
                         <!-- Dark Mode Logo -->
-                        <img src="images/dark-logo.png" alt="VAZID Logo Dark" class="logo-dark" />
+                        <img
+                            src="images/dark-logo.png"
+                            alt="VAZID Logo Dark"
+                            class="logo-dark"
+                        />
                     </a>
                 </div>
                 <ul class="nav-links">
                     <li>
-                        <a href="pages/project.html">MY CURRENT <strong>PROJECTS</strong></a>
+                        <a href="pages/project.html">CURRENT PROJECTS</a>
                     </li>
-                    <li><a href="pages/contact.html">CONNECT WITH ME</a></li>
-                     <li class="dropdown">
-                        <a href="#" class="dropbtn">CHECK MY <strong>BLOGS</strong></a>
+
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">BLOGS</a>
                         <div class="dropdown-content">
                             <a href="#">Linux</a>
-                            <a href="#">Infra</a>
                             <a href="#">DevOps</a>
                             <a href="#">Monitoring</a>
-                            <a href="#">Cloud</a>
+                            <a href="#">MLOps</a>
                             <a href="#">Data science</a>
                         </div>
                     </li>
                     <li>
-                        <a href="pages/soon.html">TAKE <strong>QUIZ</strong></a>
+                        <a href="pages/soon.html">QUIZ</a>
                     </li>
+                    <li><a href="pages/contact.html">CONTACT ME</a></li>
                 </ul>
                 <button id="dark-mode-toggle" class="dark-mode-toggle">
                     <i class="fas fa-sun"></i>
@@ -54,31 +116,73 @@
         </header>
 
         <main role="main">
+            <section class="hero">
+                <div class="hero-content">
+                    <h1>Sheikh Vazid Ahmed</h1>
+                    <p class="tagline">
+                        DevOps Engineer, MLOps & Cloud Solution Architect
+                    </p>
+                    <p class="intro">
+                        With over 6 years of experience, I specialize in
+                        designing and implementing robust, scalable cloud
+                        architectures across GCP, AWS, and Azure platforms. I'm
+                        passionate about optimizing workflows, automating
+                        processes, and delivering high-performance solutions.
+                    </p>
+                    <ul class="key-skills">
+                        <li>Cloud Architecture</li>
+                        <li>CI/CD Pipelines</li>
+                        <li>Data Science & MLOps</li>
+                        <li>Infrastructure as Code</li>
+                        <li>Containerization & Orchestration</li>
+                    </ul>
+                    <div class="cta-buttons">
+                        <a href="#projects" class="cta-button primary"
+                            >View My Work</a
+                        >
+                        <a
+                            href="pages/contact.html"
+                            class="cta-button secondary"
+                            >Hire Me</a
+                        >
+                    </div>
+                </div>
+            </section>
+
             <section class="content">
                 <h1>Launched Work</h1>
                 <label>
-                    <a href="https://moosam.site/">Moosam - Your Weather Companion</a>
+                    <a href="https://moosam.site/"
+                        >Moosam - Your Weather Companion</a
+                    >
                     <span class="tag">Weather App</span>
                     <span class="tag">Website</span>
                 </label>
-                
-                <h1>Currently working </h1>
+
+                <h1>Currently working</h1>
                 <label>
-                    <a href="https://blog.vazid.site/google-bigquery-interview-question"
+                    <a
+                        href="https://blog.vazid.site/google-bigquery-interview-question"
                         >BigQuery Interview Questions</a
                     >
                     <span class="tag">BigQuery</span>
                     <span class="tag">Interview</span>
                 </label>
                 <label>
-                    <a href="blogs/automatescript.html">Automate Your System Updates with a Custom Bash Script</a>
+                    <a href="blogs/automatescript.html"
+                        >Automate Your System Updates with a Custom Bash
+                        Script</a
+                    >
                     <span class="tag">Linux</span>
                     <span class="tag">DevOps</span>
                     <span class="tag">Infra</span>
                 </label>
 
                 <label>
-                    <a href="#">Building Monitoring Architecture in Azure Cloud Using Terraform</a>
+                    <a href="#"
+                        >Building Monitoring Architecture in Azure Cloud Using
+                        Terraform</a
+                    >
                     <span class="tag">Azure</span>
                     <span class="tag">Monitoring</span>
                     <span class="tag">Terraform</span>
@@ -86,7 +190,9 @@
 
                 <h1>More work</h1>
                 <label>
-                    <a href="#">Personal Linux Monitoring Dashboard Using Grafana</a>
+                    <a href="#"
+                        >Personal Linux Monitoring Dashboard Using Grafana</a
+                    >
                     <span class="tag">Linux</span>
                     <span class="tag">Monitoring</span>
                     <span class="tag">Grafana</span>
@@ -103,7 +209,10 @@
                     <span class="tag">Automation</span>
                 </label>
                 <label>
-                    <a href="#">Static Website: A Robust AWS-Based Web Application Framework</a>
+                    <a href="#"
+                        >Static Website: A Robust AWS-Based Web Application
+                        Framework</a
+                    >
                     <span class="tag">AWS</span>
                     <span class="tag">Static Website</span>
                 </label>
@@ -113,11 +222,13 @@
                     <span class="tag">Project</span>
                 </label>
                 <label>
-                    <a href="#">Terraform Hacks: Effortlessly list available AWS Machine Images</a>
+                    <a href="#"
+                        >Terraform Hacks: Effortlessly list available AWS
+                        Machine Images</a
+                    >
                     <span class="tag">AWS</span>
                     <span class="tag">Terraform</span>
                 </label>
-
             </section>
         </main>
 
@@ -125,7 +236,13 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <h3>About</h3>
-                    <p><b>Sheikh Vazid Ahmed</b> is a versatile DevOps Engineer and Cloud Solution Architect with over 6+ years of experience in designing and implementing robust, scalable cloud architectures across GCP, AWS, and Azure platforms.</p>
+                    <p>
+                        <b>Sheikh Vazid Ahmed</b> is a versatile DevOps Engineer
+                        and Cloud Solution Architect with over 6+ years of
+                        experience in designing and implementing robust,
+                        scalable cloud architectures across GCP, AWS, and Azure
+                        platforms.
+                    </p>
                 </div>
                 <div class="footer-section">
                     <h3>Quick Links</h3>
