@@ -171,8 +171,8 @@ nav {
 }
 
 .hero .intro {
-    font-size: 1rem;
-    max-width: 600px;
+    font-size: 1.5rem;
+    max-width: 100%;
     margin-bottom: 1rem;
     color: #666;
     transition: color 0.3s ease;
@@ -197,6 +197,10 @@ nav {
         color 0.3s ease;
 }
 
+.hero .key-skills li:hover {
+    background-color: #000000;
+    color: #ffffff;
+}
 .hero-image {
     flex: 1;
     text-align: center;
