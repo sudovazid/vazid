@@ -7,7 +7,7 @@
 
 /* Body and Typography */
 body {
-    font-family: "Courier New", Courier, monospace;
+    font-family: "Poppins", sans-serif;
     background-color: #ffffff;
     color: #000;
     min-height: 100vh;
@@ -22,7 +22,7 @@ body {
 header {
     background-color: #ffffff;
     padding: 20px;
-    position: sticky;
+    position: relative; /* Changed from sticky to relative */
     top: 0;
     z-index: 1000;
     border-bottom: 1px solid #000;
@@ -345,7 +345,7 @@ main {
 }
 /* About Me Page Styles */
 .about-me-body {
-    font-family: "Courier New", Courier, monospace;
+    font-family: "Poppins", sans-serif;
     line-height: 1.6;
     color: #000;
     max-width: 80%;
@@ -627,13 +627,131 @@ body.dark-mode .hero .key-skills li {
     background-color: #020202;
     color: white;
 }
+/* Event Post Styles */
+.event-post {
+    max-width: 80%;
+    margin: 40px auto;
+    padding: 20px;
+    font-family: "Poppins", sans-serif;
+    background-color: #ffffff;
+    position: relative; /* Add this to ensure proper stacking */
+    z-index: 1; /* Lower than the main header */
+}
 
+.event-header {
+    background-color: #f0f0f0;
+    padding: 20px;
+    margin-bottom: 20px;
+    position: relative; /* Ensure it's not affected by any sticky positioning */
+}
+.event-title {
+    color: #000080;
+    font-size: 2.2em;
+    margin-bottom: 10px;
+    line-height: 1.2;
+}
+
+.event-meta {
+    font-style: italic;
+    color: #4d4dff;
+    font-size: 0.9em;
+}
+
+.event-image {
+    width: 100%;
+    max-height: 800px;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.event-content {
+    padding: 0 20px;
+}
+
+.event-content h2 {
+    color: #0000ff;
+    border-bottom: 2px solid #0000ff;
+    padding-bottom: 5px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.event-content p {
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.event-takeaway {
+    background-color: #e6f2ff;
+    border-left: 5px solid #0000ff;
+    padding: 15px;
+    margin: 20px 0;
+}
+
+.event-content ul {
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+.event-content li {
+    margin-bottom: 10px;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #ffd700;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #0000ff;
+}
+
+/* Dark Mode Styles for Event Post */
+body.dark-mode .event-post {
+    background-color: #222;
+    color: #f1f1f1;
+}
+
+body.dark-mode .event-header {
+    background-color: #333;
+}
+
+body.dark-mode .event-title {
+    color: #4d94ff;
+}
+
+body.dark-mode .event-meta {
+    color: #bbb;
+}
+
+body.dark-mode .event-content h2 {
+    color: #4d94ff;
+    border-bottom-color: #4d94ff;
+}
+
+body.dark-mode .event-takeaway {
+    background-color: #1a1a1a;
+    border-left-color: #4d94ff;
+}
+
+body.dark-mode .cta-button {
+    background-color: #ffd700;
+}
+
+body.dark-mode .cta-button:hover {
+    background-color: #0000ff;
+}
 /* Footer Styles */
 footer {
     background-color: #ffffff;
     border-top: 1px solid #040404;
     padding: 40px 20px;
-    font-family: "Courier New", Courier, monospace;
+    font-family: "Poppins", sans-serif;
 }
 
 .footer-content {
@@ -882,6 +1000,17 @@ footer {
     .about-me-body .social-link {
         margin: 5px 0;
     }
+    .event-post {
+        padding: 15px;
+    }
+
+    .event-title {
+        font-size: 2em;
+    }
+
+    .event-image {
+        max-height: 300px;
+    }
 }
 
 @media screen and (max-width: 480px) {
@@ -935,5 +1064,16 @@ footer {
     .about-me-body h1,
     .about-me-body h2 {
         font-size: 1.5em;
+    }
+    .event-post {
+        padding: 10px;
+    }
+
+    .event-title {
+        font-size: 1.8em;
+    }
+
+    .event-image {
+        max-height: 200px;
     }
 }

@@ -6,18 +6,52 @@
         <title>{{PAGE_TITLE}}</title>
         <link rel="stylesheet" href="../css/styles.css" />
         <link rel="stylesheet" href="../css/blog.css" />
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css" rel="stylesheet" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css"
+            rel="stylesheet"
+        />
         <link
             href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/plugins/toolbar/prism-toolbar.min.css"
-            rel="stylesheet" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-        <link rel="icon" href="../images/favicon-16x16.png" sizes="16x16" type="image/png" />
-        <link rel="icon" href="../images/favicon-32x32.png" sizes="32x32" type="image/png" />
-        <link rel="icon" href="../images/favicon-48x48.png" sizes="48x48" type="image/png" />
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        />
+        <link
+            rel="icon"
+            href="../images/favicon-16x16.png"
+            sizes="16x16"
+            type="image/png"
+        />
+        <link
+            rel="icon"
+            href="../images/favicon-32x32.png"
+            sizes="32x32"
+            type="image/png"
+        />
+        <link
+            rel="icon"
+            href="../images/favicon-48x48.png"
+            sizes="48x48"
+            type="image/png"
+        />
         <link rel="apple-touch-icon" href="../images/apple-touch-icon.png" />
         <link rel="icon" href="../images/favicon.ico" type="image/x-icon" />
-        <link rel="android-chrome-icon" href="../images/android-chrome-192x192.png" />
-        <link rel="android-chrome-icon" href="../images/android-chrome-512x512.png" />
+        <link
+            rel="android-chrome-icon"
+            href="../images/android-chrome-192x192.png"
+        />
+        <link
+            rel="android-chrome-icon"
+            href="../images/android-chrome-512x512.png"
+        />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-core.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/plugins/autoloader/prism-autoloader.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/plugins/toolbar/prism-toolbar.min.js"></script>
@@ -28,18 +62,30 @@
                 <div class="logo">
                     <a href="../index.html">
                         <!-- Light Mode Logo -->
-                        <img src="../images/light-logo.png" alt="VAZID Logo Light" class="logo-light" />
+                        <img
+                            src="../images/light-logo.png"
+                            alt="VAZID Logo Light"
+                            class="logo-light"
+                        />
                         <!-- Dark Mode Logo -->
-                        <img src="../images/dark-logo.png" alt="VAZID Logo Dark" class="logo-dark" />
+                        <img
+                            src="../images/dark-logo.png"
+                            alt="VAZID Logo Dark"
+                            class="logo-dark"
+                        />
                     </a>
                 </div>
                 <ul class="nav-links">
                     <li>
-                        <a href="../pages/project.html">MY CURRENT <strong>PROJECTS</strong></a>
+                        <a href="../pages/project.html"
+                            >MY CURRENT <strong>PROJECTS</strong></a
+                        >
                     </li>
                     <li><a href="../pages/contact.html">CONNECT WITH ME</a></li>
-                     <li class="dropdown">
-                        <a href="#" class="dropbtn">CHECK MY <strong>BLOGS</strong></a>
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn"
+                            >CHECK MY <strong>BLOGS</strong></a
+                        >
                         <div class="dropdown-content">
                             <a href="#">Linux</a>
                             <a href="#">Infra</a>
@@ -50,7 +96,9 @@
                         </div>
                     </li>
                     <li>
-                        <a href="../pages/soon.html">TAKE <strong>QUIZ</strong></a>
+                        <a href="../pages/soon.html"
+                            >TAKE <strong>QUIZ</strong></a
+                        >
                     </li>
                 </ul>
                 <button id="dark-mode-toggle" class="dark-mode-toggle">
@@ -69,10 +117,18 @@
                     <div class="blog-meta">
                         <span class="blog-date"
                             ><i class="fas fa-calendar-alt"></i> Published on:
-                            <time datetime="{{PUBLISH_DATE}}">{{PUBLISH_DATE_FORMATTED}}</time></span
+                            <time datetime="{{PUBLISH_DATE}}"
+                                >{{PUBLISH_DATE_FORMATTED}}</time
+                            ></span
                         >
-                        <span class="blog-author"><i class="fas fa-user"></i> By: {{AUTHOR_NAME}}</span>
-                        <span class="blog-category"><i class="fas fa-folder"></i> Category: {{CATEGORY}}</span>
+                        <span class="blog-author"
+                            ><i class="fas fa-user"></i> By:
+                            {{AUTHOR_NAME}}</span
+                        >
+                        <span class="blog-category"
+                            ><i class="fas fa-folder"></i> Category:
+                            {{CATEGORY}}</span
+                        >
                     </div>
                 </header>
 
@@ -80,8 +136,9 @@
                     {{BLOG_CONTENT}}
 
                     <p>
-                        Your blog content goes here. You can use multiple paragraphs, headings, lists, and other HTML
-                        elements to structure your content.
+                        Your blog content goes here. You can use multiple
+                        paragraphs, headings, lists, and other HTML elements to
+                        structure your content.
                     </p>
 
                     <h2>A Sample Subheading</h2>
@@ -95,10 +152,12 @@
                     </ul>
 
                     <blockquote>
-                        <p>This is a blockquote. You can use it to highlight important quotes or information.</p>
+                        <p>
+                            This is a blockquote. You can use it to highlight
+                            important quotes or information.
+                        </p>
                     </blockquote>
 
-                    
                     <pre class="language-bash">
                     <button class="copy-button" onclick="copyCode(this)">Copy</button>
 <code>#!/bin/bash
@@ -107,12 +166,20 @@ echo "Hello, World!"
                 </div>
 
                 <footer class="blog-footer">
-                    <div class="blog-tags"><i class="fas fa-tags"></i> Tags: {{TAGS}}</div>
+                    <div class="blog-tags">
+                        <i class="fas fa-tags"></i> Tags: {{TAGS}}
+                    </div>
                     <div class="blog-share">
                         <span>Share this post:</span>
-                        <a href="#" class="share-icon"><i class="fab fa-facebook"></i></a>
-                        <a href="#" class="share-icon"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="share-icon"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="share-icon"
+                            ><i class="fab fa-facebook"></i
+                        ></a>
+                        <a href="#" class="share-icon"
+                            ><i class="fab fa-twitter"></i
+                        ></a>
+                        <a href="#" class="share-icon"
+                            ><i class="fab fa-linkedin"></i
+                        ></a>
                     </div>
                 </footer>
             </article>
@@ -187,7 +254,8 @@ echo "Hello, World!"
                 }, 2000);
             }
 
-            Prism.plugins.autoloader.languages_path = "https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/";
+            Prism.plugins.autoloader.languages_path =
+                "https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/";
 
             const darkModeToggle = document.getElementById("dark-mode-toggle");
             darkModeToggle.addEventListener("click", () => {
