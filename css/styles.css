@@ -151,7 +151,7 @@ nav {
     justify-content: center;
     padding: 4rem 2rem;
     background-color: #f8f9fa;
-    height: 100vh; /* Full screen height */
+    height: 80vh; /* Full screen height */
     text-align: center; /* Centering text */
     transition:
         background-color 0.3s ease,
