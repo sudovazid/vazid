@@ -283,7 +283,7 @@ body.dark-mode .cta-button.secondary {
 }
 
 body.dark-mode .cta-button.secondary:hover {
-    background-color: #0000ff;
+    background-color: transparent;
     color: #ffffff;
     border-color: #0000ff;
 }
@@ -743,7 +743,7 @@ body.dark-mode .event-takeaway {
 }
 
 body.dark-mode .cta-button {
-    background-color: #ffd700;
+    background-color: #0000ff;
 }
 
 body.dark-mode .cta-button:hover {
@@ -1085,4 +1085,5 @@ a {
     .event-image {
         max-height: 200px;
     }
+    
 }
