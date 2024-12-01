@@ -7,27 +7,27 @@
 
 /* Body and Typography */
 body {
-    font-family: "Poppins", sans-serif;
+    font-family: "Noticia Text", serif;
     background-color: #ffffff;
-    color: #000;
+    color: #242124;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    max-width: 80%; /* Added this line */
+    max-width: 100%; /* Added this line */
     margin: 0 auto; /* Added this line */
-    padding-left,padding-right: 30px; /* Added this line */
+    padding-left: 30px;
+    padding-right: 30px; /* Added this line */
 }
 
 /* Header Styles */
 header {
     background-color: #ffffff;
-    padding: 20px;
+    padding: 30px;
     position: relative; /* Changed from sticky to relative */
     top: 0;
     z-index: 1000;
-    border-bottom: 0px solid #000;
+    border-bottom: 0px solid #303030;
 }
-
 nav {
     display: flex;
     justify-content: space-between;
@@ -41,11 +41,11 @@ nav {
 
 .title-background h1 {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 25em; /* Adjust as needed */
-    color: rgba(0, 0, 0, 0.1); /* Light color for background text */
+    top: 60%;
+    left: 60%;
+    transform: translate(-60%, -60%);
+    font-size: 24em; /* Adjust as needed */
+    color: 242124; /* Light color for background text */
     z-index: -1; /* Ensure it's behind the label */
     pointer-events: none; /* Make sure it doesn't interfere with clicks */
 }
@@ -53,12 +53,12 @@ nav {
 .title-background label {
     position: relative;
     z-index: 1; /* Make sure labels are above the background title */
-    font-size: 5.8em;
-    margin-bottom: 10px;
+    font-size: 6.3em;
+    margin-bottom: 12px;
     background-color: #ffffff;
-    padding: 20px;
-    box-shadow: 0 10px 6px rgba(48, 47, 46, 0.79);
-    border: 1px solid #000;
+    padding: 30px;
+    box-shadow: 0 15px 6px rgba(48, 47, 46, 0.79);
+    border: 3px solid #303030;
     transition:
         transform 0.3s ease,
         box-shadow 0.3s ease;
@@ -83,7 +83,7 @@ nav {
 }
 
 .logo img {
-    max-height: 40px; /* Adjust size */
+    max-height: 60px; /* Adjust size */
     width: auto; /* Maintain aspect ratio */
 }
 
@@ -96,12 +96,12 @@ nav {
 }
 
 .nav-links li {
-    margin-left: 20px;
+    margin-left: 30px;
 }
 
 .nav-links a {
     text-decoration: none;
-    color: blue;
+    color: #242124;
 }
 
 /* Dropdown Menu */
@@ -111,9 +111,9 @@ nav {
 
 .dropbtn {
     background-color: transparent;
-    color: blue;
-    padding: 10px;
-    font-size: 16px;
+    color: 242124;
+    padding: 9px;
+    font-size: 15px;
     border: none;
     cursor: pointer;
 }
@@ -121,23 +121,23 @@ nav {
 .dropdown-content {
     display: none;
     position: absolute;
-    min-width: 160px;
+    min-width: 150px;
     z-index: 1;
-    background-color: #ffffff;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    background-color: #f3f3f3;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
 
 .dropdown-content a {
-    color: blue;
-    padding: 12px 16px;
+    color: 242124;
+    padding: 12px 15px;
     text-decoration: none;
     display: block;
 }
 
 .dropdown-content a:hover {
     text-decoration: line-through;
-    text-decoration-color: black;
-    background-color: #ddd;
+    text-decoration-color: 242124;
+    background-color: #f3f3f3;
 }
 
 .dropdown:hover .dropdown-content {
@@ -149,146 +149,176 @@ nav {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 4rem 2rem;
-    background-color: #f8f9fa;
-    height: 80vh; /* Full screen height */
-    text-align: center; /* Centering text */
-    transition:
-        background-color 0.3s ease,
-        color 0.3s ease;
+    padding: 3rem 3rem;
+    background-color: #f3f3f3;
+    min-height: 30vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 900px;
+    width: 100%;
+    gap: 3rem;
 }
 
 .hero-content {
-    max-width: 600px;
+    flex: 1;
+    max-width: 900px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 .hero h1 {
-    font-size: 2.5rem;
-    margin-bottom: 0.5rem;
-    color: #333;
-    transition: color 0.3s ease;
+    font-size: 3rem;
+    font-weight: 600;
+    color: #242124;
+    margin-bottom: 1rem;
+    line-height: 1.3;
+    letter-spacing: -0.03em;
 }
 
 .hero .tagline {
-    font-size: 1.2rem;
-    color: #0000ff;
-    margin-bottom: 1rem;
-    transition: color 0.3s ease;
+    font-size: 1.6rem;
+    color: #303030;
+    margin-bottom: 1.25rem;
+    font-weight: 300;
 }
 
 .hero .intro {
-    font-size: 1rem;
-    max-width: 100%;
-    margin-bottom: 1rem;
-    color: #666;
-    transition: color 0.3s ease;
+    font-size: 1.06rem;
+    color: #303030;
+    margin-bottom: 1.3rem;
+    line-height: 1.6;
 }
 
 .hero .key-skills {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center; /* Center the key skills */
+    gap: 0.6rem;
+    margin-bottom: 3rem;
     list-style: none;
     padding: 0;
-    margin: 0 -0.5rem;
 }
 
 .hero .key-skills li {
-    margin: 0.5rem;
-    background-color: #e9ecef;
-    padding: 0.5rem 1rem;
-    font-size: 0.9rem;
-    color: #333;
-    transition:
+    background-color: #f9f9f9;
+    color: #242124;
+    padding: 0.6rem 0.9rem;
+    font-size: 0.85rem;
+    border-radius: 15px;
+    transition: 
         background-color 0.3s ease,
-        color 0.3s ease;
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: capitalize;
+    font-weight: 600;
 }
 
 .hero .key-skills li:hover {
-    background-color: #000000;
+    background-color: #242124;
     color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
 }
 
 .hero-image {
     flex: 1;
-    text-align: center;
-    max-width: 400px;
-    margin-left: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 600px;
 }
 
 .hero-image img {
     max-width: 100%;
     height: auto;
-    border-radius: 50%;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(36, 33, 36, 0.1);
+    transition: transform 0.3s ease;
 }
 
-/* CTA Button Styles */
+.hero-image img:hover {
+    transform: scale(1.03);
+}
+
 .cta-buttons {
-    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
 }
 
 .cta-button {
-    display: inline-block;
-    padding: 0.8rem 1.5rem;
-    margin-right: 1rem;
-    margin-bottom: 1rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 1.5rem;
+    font-size: 0.95rem;
+    border-radius: 9px;
     text-decoration: none;
-    font-weight: bold;
-    transition:
-        background-color 0.3s ease,
-        color 0.3s ease,
-        border-color 0.3s ease;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: 
+        all 0.3s ease;
+    border: 3px solid transparent;
 }
 
 .cta-button.primary {
-    background-color: #0000ff;
-    color: white;
-    border: 2px solid #0000ff;
+    background-color: #242124;
+    color: f3f3f3;
+    border-color: #242124;
 }
 
 .cta-button.primary:hover {
     background-color: transparent;
-    color: #0000ff;
-    border: 2px solid #0000ff;
+    color: #242124;
+    border-color: #242124;
 }
 
 .cta-button.secondary {
     background-color: transparent;
-    color: #0000ff;
-    border: 2px solid #0000ff;
+    color: #242124;
+    border-color: #242124;
 }
 
 .cta-button.secondary:hover {
-    background-color: #0000ff;
+    background-color: #242124;
     color: #ffffff;
-    border-color: #0000ff;
 }
-
 /* Dark Mode Hero Styles */
 body.dark-mode .cta-button.primary {
-    background-color: #0000ff;
-    color: #00000;
-    border-color: #0000ff;
+    background-color: transparent;
+    color: #f3f3f3;
+    border-color: #242124;
 }
 
 body.dark-mode .cta-button.primary:hover {
-    background-color: transparent;
-    color: #fff;
-    border-color: #0000ff;
+    background-color: #242124;
+    color: #f3f3f3;
+    border-color: #242124;
 }
 
 body.dark-mode .cta-button.secondary {
     color: #ffffff;
-    border-color: #0000ff;
+    border-color: #242124;
 }
 
 body.dark-mode .cta-button.secondary:hover {
     background-color: transparent;
     color: #ffffff;
-    border-color: #0000ff;
+    border-color: #242124;
 }
 body.dark-mode .hero .key-skills li:hover {
-    background-color: #000000;
+    background-color: #242124;
     color: #ffffff;
 }
 
@@ -297,23 +327,23 @@ main {
     flex: 1;
     display: flex;
     flex-direction: column;
-    padding: 20px;
-    gap: 20px;
+    padding: 30px;
+    gap: 30px;
 }
 
 .content {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
+    gap: 30px;
     width: 100%;
 }
 
 .content label {
-    font-size: 1.8em;
-    margin-bottom: 10px;
+    font-size: 1.9em;
+    margin-bottom: 30px;
     background-color: #ffffff;
-    padding: 20px;
-    box-shadow: 0 10px 6px rgba(48, 47, 46, 0.79);
+    padding: 30px;
+    box-shadow: 0 15px 6px rgba(48, 47, 46, 0.79);
     border: 1px solid #000;
     transition:
         transform 0.3s ease,
@@ -323,8 +353,8 @@ main {
 .content label:hover {
     transform: translateY(-5px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-    background-color: blue;
-    color: white;
+    background-color: white;
+    color: #303030;
 }
 
 .content label a {
@@ -336,7 +366,7 @@ main {
 
 .content h1 {
     font-size: 2.5em;
-    margin: 30px 0 20px;
+    margin: 30px 0 15px;
     width: 100%;
     grid-column: 1 / -1;
 }
@@ -348,25 +378,25 @@ main {
 }
 /* About Me Page Styles */
 .about-me-body {
-    font-family: "Poppins", sans-serif;
+    font-family: "Noticia Text", serif;
     line-height: 1.6;
-    color: #000;
-    max-width: 80%;
+    color: #242124;
+    max-width: 90%;
     margin: 0 auto;
     padding: 30px;
     background-color: #ffffff;
 }
 
 .about-me-body h1 {
-    color: #000;
-    padding: 10px;
+    color: #242124;
+    padding: 30px;
     border-top: 1px solid #eee;
     border-bottom: 1px solid #eee;
 }
 
 .about-me-body h2 {
-    color: #fff;
-    padding: 10px;
+    color: #f5f5f5;
+    padding: 30px;
 }
 
 .about-me-body p,
@@ -374,35 +404,38 @@ main {
 .about-me-body ul {
     padding-right: 60px;
     padding-left: 60px;
-    font-size: 2vh;
+    font-size: 3vh;
 }
 
 .about-me-body .section {
-    margin-bottom: 10px;
+    margin-bottom: 30px;
 }
 
 .about-me-body .blue-bar {
-    background-color: #0000ff;
-    color: black;
+    background-color: #242124;
+    color: #f5f5f5;
     padding: 10px;
-    margin: 20px 0;
+    margin: 30px 0;
 }
 
 .about-me-body .hire-me {
-    background-color: #0000ff;
-    color: white;
-    padding: 10px 20px;
+    background-color: #f5f5f5;
+
+    border: 3px solid transparent;
+    color: #303030;
+    padding: 10px 30px;
     text-decoration: none;
     display: inline-block;
-    margin-top: 20px;
+    margin-top: 30px;
     transition:
         background-color 0.3s ease,
         transform 0.3s ease;
 }
 
 .about-me-body .hire-me:hover {
-    background-color: #0000cc;
+    background-color: #242124;
     transform: translateY(-3px);
+    color: #f5f5f5;
 }
 
 .about-me-body .social-links {
@@ -412,7 +445,7 @@ main {
 }
 
 .about-me-body .social-link {
-    background-color: #0000ff;
+    background-color: #242124;
     color: white;
     padding: 10px;
     text-decoration: none;
@@ -426,7 +459,7 @@ main {
 }
 
 .about-me-body .social-link:hover {
-    background-color: #0000cc;
+    background-color: #242124;
     transform: translateY(-3px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
@@ -475,13 +508,13 @@ main {
 
 /* Dark Mode Styles */
 .dark-mode {
-    background-color: #333;
-    color: #f1f1f1;
+    background-color: #242124;
+    color: #f3f3f3;
 }
 
 .dark-mode header {
-    background-color: #333;
-    border-bottom-color: #444;
+    background-color: #242124;
+    border-bottom-color: #303030;
 }
 
 .dark-mode .logo a,
@@ -491,27 +524,27 @@ main {
 }
 
 .dark-mode .dropdown-content {
-    background-color: #222;
+    background-color: #303030;
 }
 
 .dark-mode .dropdown-content a:hover {
-    background-color: #444;
+    background-color: #303030;
 }
 
 .dark-mode .content label {
-    background-color: #444;
+    background-color: #303030;
     color: #f1f1f1;
-    box-shadow: 0 10px 6px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 9px 6px rgba(0, 0, 0, 0.5);
 }
 
 .dark-mode .content label:hover {
-    background-color: #0000ff;
+    background-color: #000000;
     color: #f1f1f1;
 }
 
 .dark-mode footer {
     background-color: #222;
-    border-top-color: #444;
+    border-top-color: #333;
 }
 
 .dark-mode .footer-section h3 {
@@ -521,16 +554,24 @@ main {
 .dark-mode .footer-section ul li a,
 .dark-mode .footer-bottom,
 .dark-mode .social-icons a {
-    color: #ccc;
+    color: #e3e3e3;
 }
 
 .dark-mode .footer-section ul li a:hover,
 .dark-mode .social-icons a:hover {
-    color: #2196f3;
+    color: #ffffff;
 }
 .dark-mode .footer-section p {
     color: #f1f1f1;
 }
+.dark-mode .footer-bottom p{
+    color: #f1f1f1;
+}
+.dark-mode .footer-bottom p a{
+    color: #f1f1f1;
+}
+
+
 
 /*Dark Mode of hero section */
 body.dark-mode .hero {
@@ -538,30 +579,30 @@ body.dark-mode .hero {
 }
 
 body.dark-mode .hero h1 {
-    color: #f1f1f1;
+    color: #f3f3f3;
 }
 
 body.dark-mode .hero .tagline {
-    color: #4d94ff; /* Lighter blue for dark mode */
+    color: #f3f3f3; /* Lighter blue for dark mode */
 }
 
 body.dark-mode .hero .intro {
-    color: #b0b0b0;
+    color: #f3f3f3;
 }
 
 body.dark-mode .hero .key-skills li {
     background-color: #333;
-    color: #f1f1f1;
+    color: #f3f3f3;
 }
 
 /* Dark Mode Styles for About Me Page */
 .dark-mode .about-me-body {
-    background-color: #333;
-    color: #f1f1f1;
+    background-color: #303030;
+    color: #f3f3f3;
 }
 
 .dark-mode .about-me-body h1 {
-    color: #f1f1f1;
+    color: #f3f3f3;
     border-top-color: #444;
     border-bottom-color: #444;
 }
@@ -597,12 +638,12 @@ body.dark-mode .hero .key-skills li {
 /* Tag Styles */
 .tag {
     display: inline-block;
-    background-color: #e0e0e0;
-    color: #333;
-    padding: 2px 8px;
-    font-size: 0.4em;
-    margin-right: 5px;
-    margin-top: 5px;
+    background-color: #f5f5f5;
+    color: #242124;
+    padding: 3px 9px;
+    font-size: 0.6em;
+    margin-right: 6px;
+    margin-top: 6px;
     transition:
         background-color 0.3s ease,
         color 0.3s ease;
@@ -622,21 +663,21 @@ body.dark-mode .hero .key-skills li {
 /* Dark Mode Styles for Tags */
 .dark-mode .tag {
     background-color: #1c1b1b;
-    color: #f1f1f1;
+    color: #f5f5f5;
 }
 
 /* Hover Effect for Tags */
 .content label:hover .tag {
-    background-color: #020202;
-    color: white;
+    background-color: #242124;
+    color: #f5f5f5;
 }
 /* Event Post Styles */
 .event-post {
     max-width: 80%;
     margin: 40px auto;
     padding: 20px;
-    font-family: "Poppins", sans-serif;
-    background-color: #ffffff;
+    font-family: "Noticia Text", serif;
+    background-color: #f5f5f5;
     position: relative; /* Add this to ensure proper stacking */
     z-index: 1; /* Lower than the main header */
 }
@@ -647,8 +688,9 @@ body.dark-mode .hero .key-skills li {
     margin-bottom: 20px;
     position: relative; /* Ensure it's not affected by any sticky positioning */
 }
+/* Event Post Styles */
 .event-title {
-    color: #000080;
+    color: #303030;
     font-size: 2.2em;
     margin-bottom: 10px;
     line-height: 1.2;
@@ -656,7 +698,7 @@ body.dark-mode .hero .key-skills li {
 
 .event-meta {
     font-style: italic;
-    color: #4d4dff;
+    color: #242124;
     font-size: 0.9em;
 }
 
@@ -672,8 +714,8 @@ body.dark-mode .hero .key-skills li {
 }
 
 .event-content h2 {
-    color: #0000ff;
-    border-bottom: 2px solid #0000ff;
+    color: #242124;
+    border-bottom: 3px solid #242124;
     padding-bottom: 5px;
     margin-top: 30px;
     margin-bottom: 20px;
@@ -685,8 +727,8 @@ body.dark-mode .hero .key-skills li {
 }
 
 .event-takeaway {
-    background-color: #e6f2ff;
-    border-left: 5px solid #0000ff;
+    background-color: #f5f5f5;
+    border-left: 5px solid #242124;
     padding: 15px;
     margin: 20px 0;
 }
@@ -704,14 +746,14 @@ body.dark-mode .hero .key-skills li {
     display: inline-block;
     background-color: #ffd700;
     color: white;
-    padding: 10px 20px;
+    padding: 15px 30px;
     text-decoration: none;
-    margin-top: 20px;
+    margin-top: 30px;
     transition: background-color 0.3s ease;
 }
 
 .cta-button:hover {
-    background-color: #0000ff;
+    background-color: #242124;
 }
 
 /* Dark Mode Styles for Event Post */
@@ -725,56 +767,55 @@ body.dark-mode .event-header {
 }
 
 body.dark-mode .event-title {
-    color: #4d94ff;
+    color: #f5f5f5;
 }
 
 body.dark-mode .event-meta {
-    color: #bbb;
+    color: #f5f5f5;
 }
 
 body.dark-mode .event-content h2 {
-    color: #4d94ff;
-    border-bottom-color: #4d94ff;
+    color: #f5f5f5;
+    border-bottom-color: #f5f5f5;
 }
 
 body.dark-mode .event-takeaway {
-    background-color: #1a1a1a;
-    border-left-color: #4d94ff;
+    background-color: #303030;
+    border-left-color: #f5f5f5;
 }
 
 body.dark-mode .cta-button {
-    background-color: #0000ff;
+    background-color: #242124;
 }
-
 body.dark-mode .cta-button:hover {
-    background-color: #0000ff;
+    background-color: #303030;
 }
 /* Footer Styles */
 footer {
     background-color: #ffffff;
-    border-top: 1px solid #040404;
-    padding: 40px 20px;
-    font-family: "Poppins", sans-serif;
+    border-top: 3px solid #303030;
+    padding: 60px 30px;
+    font-family: "Noticia Text", serif;
 }
 
 .footer-content {
-    max-width: 1200px;
+    max-width: 1500px;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    color: blue;
+    color: 242124;
 }
 
 .footer-section {
     flex: 1;
-    min-width: 200px;
-    margin-bottom: 20px;
+    min-width: 90px;
+    margin-bottom: 30px;
 }
 
 .footer-section h3 {
-    font-size: 1.2em;
-    color: #333;
+    font-size: 1.5em;
+    color: #303030;
     margin-bottom: 15px;
     font-weight: bold;
 }
@@ -785,34 +826,36 @@ footer {
 }
 
 .footer-section ul li {
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 .footer-section ul li a {
-    color: #666;
+    color: #303030;
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 .footer-section ul li a:hover {
-    color: #0000ff;
+    color: #242124;
 }
+
+
 
 .footer-bottom {
     margin-top: 30px;
     text-align: center;
-    color: #999;
+    color: #303030;
     font-size: 0.9em;
 }
 
 .footer-bottom p,
 a {
     margin: 5px 0;
-    color: #999;
+    color: #303030;
     text-decoration: none;
 }
 .footer-bottom a:hover {
-    color: #0000ff;
+    color: #242124;
 }
 
 .social-icons {
@@ -822,33 +865,35 @@ a {
 }
 
 .social-icons a {
-    color: #666;
+    color: #E5E4E2;
     font-size: 1.5em;
-    margin: 0 10px;
+    margin: 0 15px;
     transition: color 0.3s ease;
 }
 
 .social-icons a:hover {
-    color: #0000ff;
+    color: #242124;
 }
 
 @media screen and (max-width: 1024px) {
     .hero {
         flex-direction: column;
         text-align: center;
-        padding: 3rem 1.5rem;
+        padding: 4rem 2rem;
+        gap: 2rem;
     }
 
     .hero-content {
         max-width: 100%;
+        text-align: center;
     }
 
     .hero h1 {
-        font-size: 2.2rem;
+        font-size: 2.8rem;
     }
 
-    .hero .intro {
-        font-size: 0.9rem;
+    .hero .tagline {
+        font-size: 1.3rem;
     }
 
     .hero .key-skills {
@@ -856,14 +901,13 @@ a {
     }
 
     .hero-image {
-        margin-left: 0;
-        margin-top: 2rem;
-        max-width: 300px;
+        max-width: 400px;
     }
 
     .cta-buttons {
         justify-content: center;
     }
+
 }
 /* Responsive Styles */
 @media screen and (max-width: 768px) {
@@ -961,28 +1005,19 @@ a {
         padding: 0.8em 1.2em;
     }
     .hero {
-        padding: 2rem 1rem;
+        padding: 3rem 1.5rem;
     }
 
     .hero h1 {
-        font-size: 2rem;
+        font-size: 2.5rem;
     }
 
     .hero .tagline {
-        font-size: 1.1rem;
-    }
-
-    .hero .intro {
-        font-size: 0.85rem;
-    }
-
-    .hero .key-skills li {
-        font-size: 0.8rem;
-        padding: 0.4rem 0.8rem;
+        font-size: 1.2rem;
     }
 
     .hero-image {
-        max-width: 250px;
+        max-width: 300px;
     }
 
     .cta-button {
@@ -1032,30 +1067,24 @@ a {
         padding: 0.2em 02em;
     }
     .hero h1 {
-        font-size: 1.8rem;
+        font-size: 2.2rem;
     }
 
     .hero .tagline {
-        font-size: 1rem;
+        font-size: 1.1rem;
     }
 
     .hero .intro {
-        font-size: 0.8rem;
-    }
-
-    .hero .key-skills li {
-        font-size: 0.75rem;
-        padding: 0.3rem 0.6rem;
+        font-size: 1rem;
     }
 
     .hero-image {
-        max-width: 200px;
+        max-width: 250px;
     }
 
     .cta-button {
-        padding: 0.6rem 1rem;
-        font-size: 0.8rem;
-        margin-right: 0.5rem;
+        padding: 0.6rem 1.2rem;
+        font-size: 0.9rem;
     }
     .about-me-body {
         max-width: 100%;
