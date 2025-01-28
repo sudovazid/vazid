@@ -4,7 +4,7 @@
     max-width: 80%;
     margin: 0 auto;
     padding: 20px;
-    font-family: "Noticia Text", serif;
+    font-family: "DM Sans", serif;
     box-sizing: border-box;
 }
 
@@ -100,7 +100,8 @@ a {
 }
 
 .blog-body code {
-    font-family: "Noticia Text", serif;
+    font-family: "DM Sans", serif;
+
     font-size: 0.6em;
     word-wrap: break-word;
     white-space: pre-wrap;

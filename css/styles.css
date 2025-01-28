@@ -7,7 +7,7 @@
 
 /* Body and Typography */
 body {
-    font-family: "Noticia Text", serif;
+    font-family: "DM Sans", serif;
     background-color: #ffffff;
     color: #242124;
     min-height: 100vh;
@@ -22,11 +22,11 @@ body {
 /* Header Styles */
 header {
     background-color: #ffffff;
-    padding: 30px;
-    position: relative; /* Changed from sticky to relative */
+    padding: 10px;
+    position: sticky; /* Changed from sticky to relative */
     top: 0;
     z-index: 1000;
-    border-bottom: 0px solid #303030;
+    border-bottom: 2px solid #303030;
 }
 nav {
     display: flex;
@@ -83,7 +83,7 @@ nav {
 }
 
 .logo img {
-    max-height: 60px; /* Adjust size */
+    max-height: 40px; /* Adjust size */
     width: auto; /* Maintain aspect ratio */
 }
 
@@ -211,7 +211,7 @@ nav {
     padding: 0.6rem 0.9rem;
     font-size: 0.85rem;
     border-radius: 15px;
-    transition: 
+    transition:
         background-color 0.3s ease,
         transform 0.2s ease,
         box-shadow 0.2s ease;
@@ -227,7 +227,7 @@ nav {
     background-color: #242124;
     color: #ffffff;
     transform: translateY(-2px);
-    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
 }
 
 .hero-image {
@@ -267,8 +267,7 @@ nav {
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    transition: 
-        all 0.3s ease;
+    transition: all 0.3s ease;
     border: 3px solid transparent;
 }
 
@@ -378,7 +377,7 @@ main {
 }
 /* About Me Page Styles */
 .about-me-body {
-    font-family: "Noticia Text", serif;
+    font-family: "DM Sans", serif;
     line-height: 1.6;
     color: #242124;
     max-width: 90%;
@@ -564,14 +563,12 @@ main {
 .dark-mode .footer-section p {
     color: #f1f1f1;
 }
-.dark-mode .footer-bottom p{
+.dark-mode .footer-bottom p {
     color: #f1f1f1;
 }
-.dark-mode .footer-bottom p a{
+.dark-mode .footer-bottom p a {
     color: #f1f1f1;
 }
-
-
 
 /*Dark Mode of hero section */
 body.dark-mode .hero {
@@ -676,7 +673,7 @@ body.dark-mode .hero .key-skills li {
     max-width: 80%;
     margin: 40px auto;
     padding: 20px;
-    font-family: "Noticia Text", serif;
+    font-family: "DM Sans", serif;
     background-color: #f5f5f5;
     position: relative; /* Add this to ensure proper stacking */
     z-index: 1; /* Lower than the main header */
@@ -793,9 +790,9 @@ body.dark-mode .cta-button:hover {
 /* Footer Styles */
 footer {
     background-color: #ffffff;
-    border-top: 3px solid #303030;
+    border-top: 2px dashed #303030;
     padding: 60px 30px;
-    font-family: "Noticia Text", serif;
+    font-family: "DM Sans", serif;
 }
 
 .footer-content {
@@ -839,8 +836,6 @@ footer {
     color: #242124;
 }
 
-
-
 .footer-bottom {
     margin-top: 30px;
     text-align: center;
@@ -865,7 +860,7 @@ a {
 }
 
 .social-icons a {
-    color: #E5E4E2;
+    color: #e5e4e2;
     font-size: 1.5em;
     margin: 0 15px;
     transition: color 0.3s ease;
@@ -907,7 +902,6 @@ a {
     .cta-buttons {
         justify-content: center;
     }
-
 }
 /* Responsive Styles */
 @media screen and (max-width: 768px) {
@@ -1114,5 +1108,4 @@ a {
     .event-image {
         max-height: 200px;
     }
-    
 }
