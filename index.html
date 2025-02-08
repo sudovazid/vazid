@@ -7,6 +7,7 @@
             VAZID - DevOps Engineer, Web Developer & ML Ops Enthusiast
         </title>
         <link rel="stylesheet" href="css/styles.css" />
+        <link rel="stylesheet" href="css/blog.css" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
@@ -99,14 +100,7 @@
                     </li>
 
                     <li class="dropdown">
-                        <a href="pages/blogs.html" class="dropbtn">BLOGS</a>
-                        <div class="dropdown-content">
-                            <a href="#">Linux</a>
-                            <a href="#">DevOps</a>
-                            <a href="#">Monitoring</a>
-                            <a href="#">MLOps</a>
-                            <a href="#">Data science</a>
-                        </div>
+                        <a href="pages/blogs.html">BLOGS</a>
                     </li>
                     <li>
                         <a href="pages/quiz.html">QUIZ</a>
@@ -148,7 +142,7 @@
                             class="cta-button secondary"
                             >Hire Me</a
                         >
-                        <a href="#projects" class="cta-button primary"
+                        <a href="pages/project.html" class="cta-button primary"
                             >View My Work</a
                         >
                     </div>
@@ -156,94 +150,99 @@
             </section>
 
             <section class="content">
-                <h1>Launched Work</h1>
-                <label>
-                    <a href="https://moosam.site/"
-                        >Moosam - Your Weather Companion</a
-                    >
-                    <span class="tag">Weather App</span>
-                    <span class="tag">Website</span>
-                </label>
+                <h1>Launched Project</h1>
+                <div class="blog-grid">
+                    <!-- Blog Card Template -->
+                    <article class="blog-card">
+                        <div class="card-content">
+                            <h2>Automating CI/CD Pipelines</h2>
+                            <p>
+                                Learn how to build efficient CI/CD pipelines
+                                using modern automation tools and best
+                                practices...
+                            </p>
+                            <div class="card-meta">
+                                <span class="date">March 15, 2024</span>
+                                <div class="tags">
+                                    <span class="tag">DevOps</span>
+                                    <span class="tag">Automation</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- More blog cards... -->
+                </div>
                 <h1>Recent Activities</h1>
-                <label>
-                    <a href="blogs/event/gdg-mangalore-2024.html">
-                        GDG Mangalore 2024: AI on Google Cloud Insights
-                    </a>
-                    <span class="tag">GDG</span>
-                    <span class="tag">Mangalore</span>
-                    <span class="tag">Google Cloud</span>
-                    <span class="tag">Event</span>
-                </label>
+                <div class="blog-grid">
+                    <!-- Blog Card Template -->
+                    <article class="blog-card">
+                        <div class="card-content">
+                            <h2>
+                                <a href="blogs/event/gdg-mangalore-2024.html">
+                                    GDG Mangalore 2024: AI on Google Cloud
+                                    Insights
+                                </a>
+                            </h2>
+                            <p>
+                                Learn how to build efficient CI/CD pipelines
+                                using modern automation tools and best
+                                practices...
+                            </p>
+                            <div class="card-meta">
+                                <span class="date">March 15, 2024</span>
+                                <div class="tags">
+                                    <span class="tag">BigQuery</span>
+                                    <span class="tag">Interview</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- More blog cards... -->
+                </div>
                 <h1>Currently working</h1>
-                <label>
-                    <a
-                        href="https://blog.vazid.site/google-bigquery-interview-question"
-                        >BigQuery Interview Questions</a
-                    >
-                    <span class="tag">BigQuery</span>
-                    <span class="tag">Interview</span>
-                </label>
-                <label>
-                    <a href="blogs/automatescript.html"
-                        >Automate Your System Updates with a Custom Bash
-                        Script</a
-                    >
-                    <span class="tag">Linux</span>
-                    <span class="tag">DevOps</span>
-                    <span class="tag">Infra</span>
-                </label>
-
-                <label>
-                    <a href="#"
-                        >Building Monitoring Architecture in Azure Cloud Using
-                        Terraform</a
-                    >
-                    <span class="tag">Azure</span>
-                    <span class="tag">Monitoring</span>
-                    <span class="tag">Terraform</span>
-                </label>
-
+                <div class="blog-grid">
+                    <!-- Blog Card Template -->
+                    <article class="blog-card">
+                        <div class="card-content">
+                            <h2>BigQuery Interview Questions</h2>
+                            <p>
+                                Learn how to build efficient CI/CD pipelines
+                                using modern automation tools and best
+                                practices...
+                            </p>
+                            <div class="card-meta">
+                                <span class="date">March 15, 2024</span>
+                                <div class="tags">
+                                    <span class="tag">BigQuery</span>
+                                    <span class="tag">Interview</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- More blog cards... -->
+                </div>
                 <h1>More work</h1>
-                <label>
-                    <a href="#"
-                        >Personal Linux Monitoring Dashboard Using Grafana</a
-                    >
-                    <span class="tag">Linux</span>
-                    <span class="tag">Monitoring</span>
-                    <span class="tag">Grafana</span>
-                </label>
-                <label>
-                    <a href="#">Budget AWS Serverless Architecture</a>
-                    <span class="tag">AWS</span>
-                    <span class="tag">Serverless</span>
-                </label>
-                <label>
-                    <a href="#">Automate GitHub to EC2 Deployment</a>
-                    <span class="tag">GitHub</span>
-                    <span class="tag">EC2</span>
-                    <span class="tag">Automation</span>
-                </label>
-                <label>
-                    <a href="#"
-                        >Static Website: A Robust AWS-Based Web Application
-                        Framework</a
-                    >
-                    <span class="tag">AWS</span>
-                    <span class="tag">Static Website</span>
-                </label>
-                <label>
-                    <a href="#">File Organizer: Linux Project #1</a>
-                    <span class="tag">Linux</span>
-                    <span class="tag">Project</span>
-                </label>
-                <label>
-                    <a href="#"
-                        >Terraform Hacks: Effortlessly list available AWS
-                        Machine Images</a
-                    >
-                    <span class="tag">AWS</span>
-                    <span class="tag">Terraform</span>
-                </label>
+                <div class="blog-grid">
+                    <!-- Blog Card Template -->
+                    <article class="blog-card">
+                        <div class="card-content">
+                            <h2>BigQuery Interview Questions</h2>
+                            <p>
+                                Learn how to build efficient CI/CD pipelines
+                                using modern automation tools and best
+                                practices...
+                            </p>
+                            <div class="card-meta">
+                                <span class="date">March 15, 2024</span>
+                                <div class="tags">
+                                    <span class="tag">BigQuery</span>
+                                    <span class="tag">Interview</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- More blog cards... -->
+                </div>
             </section>
         </main>
 

@@ -3,10 +3,9 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>
-            VAZID - DevOps Engineer, Web Developer & ML Ops Enthusiast
-        </title>
+        <title>VAZID - Blogs</title>
         <link rel="stylesheet" href="../css/styles.css" />
+        <link rel="stylesheet" href="../css/blog.css">
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
@@ -78,7 +77,7 @@
         <header>
             <nav>
                 <div class="logo">
-                    <a href="index.html">
+                    <a href="../index.html">
                         <!-- Light Mode Logo -->
                         <img
                             src="../images/light-logo.png"
@@ -97,16 +96,8 @@
                     <li>
                         <a href="../pages/project.html">CURRENT PROJECTS</a>
                     </li>
-
                     <li class="dropdown">
-                        <a href="#" class="dropbtn">BLOGS</a>
-                        <div class="dropdown-content">
-                            <a href="#">Linux</a>
-                            <a href="#">DevOps</a>
-                            <a href="#">Monitoring</a>
-                            <a href="#">MLOps</a>
-                            <a href="#">Data science</a>
-                        </div>
+                        <a href="pages/blogs.html">BLOGS</a>
                     </li>
                     <li>
                         <a href="../pages/quiz.html">QUIZ</a>
@@ -121,10 +112,93 @@
                 <div class="icon" onclick="toggleMenu()">☰</div>
             </nav>
         </header>
-
-        <main role="main">
-            <h1>Working on it</h1>
-        </main>
+        <main role="main" class="blog-container">
+                <h1 class="blog-title">Blogs</h1>
+                <p class="blog-subtitle">Explore technical guides and insights across various domains</p>
+                <div class="blog-categories">
+                    <button class="category-btn active">All</button>
+                    <button class="category-btn">Automation</button>
+                    <button class="category-btn">Cloud</button>
+                    <button class="category-btn">DevOps</button>
+                    <button class="category-btn">MLOps</button>
+                    <button class="category-btn">Monitoring</button>
+                    <button class="category-btn">Linux</button>
+                    <button class="category-btn">Coding</button>
+                </div>
+                <div class="blog-grid">
+                    <!-- Blog Card Template -->
+                    <article class="blog-card">
+                        <a href="https://blog.vazid.site/google-bigquery-interview-question">
+                        <div class="card-content">
+                            <h2>Google BigQuery Interview Question</h2>
+                            <p>These question will help you prepare for the Google Data engineer...</p>
+                            <div class="card-meta">
+                                <span class="date">Dec 12, 2023</span>
+                                <div class="tags">
+                                    <span class="tag">Cloud</span>
+                                </div>
+                            </div>
+                        </div>
+                        </a>
+                    </article>
+                    <!-- More blog cards... -->
+                    <article class="blog-card">
+                        <a href="https://blog.vazid.site/how-to-automate-system-updates-using-a-custom-bash-script">
+                        <div class="card-content">
+                            <h2>Automate system bash script</h2>
+                            <p>This blog post introduces a Bash script designed to simplify Linux system ...</p>
+                            <div class="card-meta">
+                                <span class="date">Jan 4, 2025</span>
+                                <div class="tags">
+                                    <span class="tag">Autoamtion</span>
+                                    <span class="tag">Coding</span>
+                                </div>
+                            </div>
+                        </div>
+                        </a>
+                    </article>
+                    <article class="blog-card">
+                        <div class="card-content">
+                            <h2>Automating CI/CD Pipelines</h2>
+                            <p>Learn how to build efficient CI/CD pipelines using modern automation tools...</p>
+                            <div class="card-meta">
+                                <span class="date">March 15, 2024</span>
+                                <div class="tags">
+                                    <span class="tag">Cloud</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="blog-card">
+                        <a href="https://blog.vazid.site/introducing-the-coffee-house-theme-for-ghostty-terminal">
+                            <div class="card-content">
+                                <h2>Coffee Theme for Ghostty Terminal</h2>
+                                <p>If you are a Coffee lover working hard and missing coffee so...</p>
+                                <div class="card-meta">
+                                    <span class="date">Jan 4, 2025</span>
+                                    <div class="tags">
+                                        <span class="tag">Linux</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+                    <article class="blog-card">
+                        <a href="https://blog.vazid.site/automate-file-storage-security-in-aws-s3-bucket-using-trend-micro-cloud-one-9d01d64201f4">
+                        <div class="card-content">
+                            <h2>AWS S3 bucket using Trend Micro Cloud</h2>
+                            <p>This blog is used to create a secure S3 bucket in an AWS account Using Trend Micro...</p>
+                            <div class="card-meta">
+                                <span class="date">Jan 4, 2025</span>
+                                <div class="tags">
+                                    <span class="tag">Linux</span>
+                                </div>
+                            </div>
+                        </div>
+                        </a>
+                    </article>
+                </div>
+            </main>
 
         <footer>
             <div class="footer-content">
@@ -198,6 +272,32 @@
                 document.body.classList.toggle("dark-mode");
                 darkModeToggle.classList.toggle("dark-mode");
             });
+        </script>
+        // Add this script before </body>
+        <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const tabs = document.querySelectorAll('.tab');
+            const blogCards = document.querySelectorAll('.blog-card');
+
+            tabs.forEach(tab => {
+                tab.addEventListener('click', function() {
+                    // Remove active class from all tabs
+                    tabs.forEach(t => t.classList.remove('active'));
+                    this.classList.add('active');
+
+                    const filter = this.dataset.section;
+
+                    blogCards.forEach(card => {
+                        const categories = card.dataset.categories.split(',');
+                        if(filter === 'all' || categories.includes(filter)) {
+                            card.style.display = 'block';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
         </script>
     </body>
 </html>

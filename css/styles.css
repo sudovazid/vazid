@@ -386,14 +386,13 @@ main {
 
 .about-me-body h1 {
     color: #242124;
-    padding: 30px;
-    border-top: 1px solid #eee;
+    padding: 10px;
     border-bottom: 1px solid #eee;
 }
 
 .about-me-body h2 {
     color: #f5f5f5;
-    padding: 30px;
+    padding: 10px;
 }
 
 .about-me-body p,
