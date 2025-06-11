@@ -1,481 +1,343 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>GDG Mangalore 2024: AI on Google Cloud Insights | VAZID</title>
-        <meta
-            name="description"
-            content="Explore key insights from GDG Mangalore 2024 event on AI and Google Cloud. Learn about Google AI Studio, LLMs, and securing GCP AI environments."
-        />
-        <meta
-            name="keywords"
-            content="GDG Mangalore, Google Cloud, AI, Machine Learning, DevOps, Cloud Computing"
-        />
-        <meta name="author" content="Sheikh Vazid Ahmed" />
-        <link
-            rel="canonical"
-            href="https://vazid.site/blogs/events/gdg-mangalore-2024.html"
-        />
-        <!-- Open Graph / Facebook -->
-        <meta property="og:type" content="article" />
-        <meta
-            property="og:url"
-            content="https://vazid.site/blogs/events/gdg-mangalore-2024.html"
-        />
-        <meta
-            property="og:title"
-            content="GDG Mangalore 2024: AI on Google Cloud Insights"
-        />
-        <meta
-            property="og:description"
-            content="Dive into the latest AI and Google Cloud innovations from GDG Mangalore 2024. Discover practical insights for DevOps and cloud architects."
-        />
-        <meta
-            property="og:image"
-            content="https://vazid.site/images/gdg-event/gdg-mangalore-banner.jpg"
-        />
-        <!-- Twitter -->
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta
-            property="twitter:url"
-            content="https://vazid.site/blogs/events/gdg-mangalore-2024.html"
-        />
-        <meta
-            property="twitter:title"
-            content="GDG Mangalore 2024: AI on Google Cloud Insights"
-        />
-        <meta
-            property="twitter:description"
-            content="Explore key takeaways from GDG Mangalore 2024 on AI and Google Cloud technologies. Essential reading for tech professionals."
-        />
-        <meta
-            property="twitter:image"
-            content="https://vazid.site/images/gdg-event/gdg-mangalore-banner.jpg"
-        />
-        <link rel="stylesheet" href="../../css/styles.css" />
-        <link rel="stylesheet" href="../../css/blog.css" />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
-            rel="stylesheet"
-        />
-        <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-        />
-        <link
-            rel="icon"
-            href="images/favicon-16x16.png"
-            sizes="16x16"
-            type="image/png"
-        />
-        <link
-            rel="icon"
-            href="images/favicon-16x16.png"
-            sizes="32x32"
-            type="image/png"
-        />
-        <link
-            rel="icon"
-            href="images/favicon-32x32.png"
-            sizes="48x48"
-            type="image/png"
-        />
-        <link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
-        <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
-        <link
-            rel="android-chrome-icon"
-            href="images/android-chrome-192x192.png"
-        />
-        <link
-            rel="android-chrome-icon"
-            href="images/android-chrome-512x512.png"
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GDG Mangalore 2024 Event | Vazid's Blog</title>
+    <link rel="stylesheet" href="../../css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../../css/styles.css" />
+    <link rel="stylesheet" href="../../css/contact.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      rel="icon"
+      href="../../images/favicon-16x16.png"
+      sizes="16x16"
+      type="image/png"
+    />
+    <link
+      rel="icon"
+      href="../../images/favicon-16x16.png"
+      sizes="32x32"
+      type="image/png"
+    />
+    <link
+      rel="icon"
+      href="../../images/favicon-32x32.png"
+      sizes="48x48"
+      type="image/png"
+    />
+    <link rel="apple-touch-icon" href="../../images/apple-touch-icon.png" />
+    <link rel="icon" href="../../images/favicon.ico" type="image/x-icon" />
+    <link
+      rel="android-chrome-icon"
+      href="../../images/android-chrome-192x192.png"
+    />
+    <link
+      rel="android-chrome-icon"
+      href="../../images/android-chrome-512x512.png"
+    />
+  </head>
+  <body>
+    <!-- Header: This element is intentionally left empty.
+         Your scripts.js file will load the site's main header here. -->
+    <header>
+      <nav>
+        <div class="logo">
+          <a href="../../index.html">
+            <!-- Light Mode Logo -->
+            <img
+              src="../../images/light-logo.png"
+              alt="VAZID Logo Light"
+              class="logo-light"
+            />
+            <!-- Dark Mode Logo -->
+            <img
+              src="../../images/dark-logo.png"
+              alt="VAZID Logo Dark"
+              class="logo-dark"
+            />
+          </a>
+        </div>
+        <ul class="nav-links">
+          <li>
+            <a href="../../pages/project.html">CURRENT PROJECTS</a>
+          </li>
+          <li class="dropdown">
+            <a href="../../pages/blogs.html">BLOGS</a>
+          </li>
+          <li>
+            <a href="../../pages/quiz.html">QUIZ</a>
+          </li>
+          <li><a href="../../pages/contact.html">CONTACT ME</a></li>
+          <li><a href="../../pages/about-me.html">ABOUT ME</a></li>
+        </ul>
+        <button id="dark-mode-toggle" class="dark-mode-toggle">
+          <i class="fas fa-sun"></i>
+          <i class="fas fa-moon"></i>
+        </button>
+        <div class="icon" onclick="toggleMenu()">☰</div>
+      </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+      <article class="event-post">
+        <div class="event-header">
+          <h1 class="event-title">
+            Devs for an Evening: A Recap of the GDG Mangalore 2024 Event
+          </h1>
+          <p class="event-meta">
+            Posted on <time datetime="2024-05-30">May 30, 2024</time> by Vazid
+          </p>
+        </div>
+
+        <!-- Gemini API Feature Section -->
+        <div class="gemini-feature">
+          <!-- The button now has a unique class for styling -->
+          <button id="summarize-button" class="gemini-button">
+            ✨ Summarize with Gemini
+          </button>
+          <div
+            id="gemini-summary-container"
+            class="gemini-summary"
+            style="display: none"
+          >
+            <h3>Summary ✨</h3>
+            <div id="gemini-loader" class="loader" style="display: none"></div>
+            <p id="gemini-summary-text"></p>
+          </div>
+        </div>
+
+        <!-- Image source has been replaced with a reliable placeholder -->
+        <img
+          src="../../images/gdg-event/gdg-mangalore.jpg"
+          alt="A vibrant collage of speakers and attendees at the GDG Mangalore 2024 event."
+          class="event-image"
+          onerror="this.onerror=null;this.src='https://placehold.co/800x400/282828/a3a0a3?text=Image+Not+Found';"
         />
 
-        <script type="application/ld+json">
-            {
-                "@context": "https://schema.org",
-                "@type": "BlogPosting",
-                "headline": "GDG Mangalore 2024: AI on Google Cloud Insights",
-                "image": "https://vazid.site/images/gdg-event/gdg-mangalore.jpg",
-                "author": {
-                    "@type": "Person",
-                    "name": "Sheikh Vazid Ahmed"
-                },
-                "publisher": {
-                    "@type": "Organization",
-                    "name": "VAZID",
-                    "logo": {
-                        "@type": "ImageObject",
-                        "url": "https://vazid.site/images/vazid-logo.png"
-                    }
-                },
-                "datePublished": "2024-09-22",
-                "dateModified": "2024-09-22",
-                "mainEntityOfPage": {
-                    "@type": "WebPage",
-                    "@id": "https://vazid.site/blogs/events/gdg-mangalore-2024.html"
-                },
-                "description": "Comprehensive insights from GDG Mangalore 2024 event on AI applications and Google Cloud technologies. Essential reading for DevOps engineers and cloud architects."
+        <section class="event-content" id="blog-content">
+          <p>
+            The tech community in Mangalore recently came alive with the "Devs
+            for an Evening" event, organized by the Google Developer Group (GDG)
+            Mangalore. It was a fantastic gathering of developers, students, and
+            tech enthusiasts, all eager to learn, connect, and share their
+            passion for technology. As a speaker and attendee, I had a front-row
+            seat to the energy and excitement that filled the room.
+          </p>
+
+          <h2>A Lineup of Insightful Talks</h2>
+          <p>
+            The evening was packed with a diverse range of sessions covering
+            some of the most relevant topics in the tech world today.
+          </p>
+          <ul>
+            <li>
+              <strong>Saanvi</strong> kicked things off with an inspiring talk
+              on her journey into open-source, sharing practical tips on how to
+              get started and make meaningful contributions.
+            </li>
+            <li>
+              <strong>Sushanth</strong> followed with a deep dive into advanced
+              Android development, showcasing modern techniques and best
+              practices that left the audience with plenty to think about.
+            </li>
+            <li>
+              My own session focused on the
+              <strong>power of automation with Python scripts</strong>. I
+              demonstrated how a few lines of code can save hours of manual
+              work, and it was great to see so many people engaged and asking
+              questions.
+            </li>
+            <li>
+              <strong>Ankith</strong> then took the stage to talk about
+              <strong>Gemini and the latest advancements in AI</strong>,
+              providing a glimpse into the future of intelligent applications.
+            </li>
+            <li>
+              Finally, <strong>Prasad</strong> wrapped up the talks with a
+              session on the importance of personal branding for developers,
+              offering actionable advice on building a strong online presence.
+            </li>
+          </ul>
+
+          <blockquote class="event-takeaway">
+            <p>
+              The variety of topics ensured there was something for everyone,
+              from seasoned professionals to students just starting their tech
+              journey.
+            </p>
+          </blockquote>
+
+          <h2>More Than Just Talks</h2>
+          <p>
+            What made "Devs for an Evening" truly special was the sense of
+            community. The networking breaks were buzzing with conversations,
+            with attendees connecting with speakers and each other, sharing
+            ideas, and forging new collaborations. The Q&A sessions were lively
+            and interactive, reflecting the curiosity and engagement of the
+            Mangalore tech community.
+          </p>
+
+          <h2>Key Takeaways</h2>
+          <ul>
+            <li>
+              <strong>The Mangalore Tech Scene is Thriving:</strong> The event
+              was a testament to the growing and vibrant developer community in
+              the region.
+            </li>
+            <li>
+              <strong>Continuous Learning is Key:</strong> From AI to personal
+              branding, the sessions highlighted the importance of staying
+              updated with the latest trends and skills.
+            </li>
+            <li>
+              <strong>Community is Everything:</strong> Events like these are
+              invaluable for networking, learning from peers, and finding
+              inspiration.
+            </li>
+          </ul>
+          <p>
+            A huge thank you to the GDG Mangalore team for organizing such a
+            well-executed and impactful event. It was a memorable evening of
+            learning, networking, and celebrating the spirit of technology. I'm
+            already looking forward to the next one!
+          </p>
+        </section>
+      </article>
+    </main>
+
+    <!-- Footer: The footer will be dynamically loaded by your scripts.js -->
+    <footer>
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>About</h3>
+          <p>
+            Sheikh Vazid Ahmed is a skilled DevOps Engineer and Cloud Architect
+            proficient in GCP, AWS, and Azure.
+          </p>
+        </div>
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../pages/project.html">Project</a></li>
+            <li><a href="../pages/blogs.html">BLOGS</a></li>
+            <li><a href="../pages/contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Contact Me</h3>
+          <p><strong>Email:</strong> sheikh.vazid.ahmed@gmail.com</p>
+          <p><strong>Current Location:</strong> Mangalore, Karnataka</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="social-icons">
+          <a href="https://www.facebook.com/vazid009" aria-label="Facebook"
+            ><i class="fab fa-facebook"></i
+          ></a>
+          <a href="https://x.com/sudovazid" aria-label="x"
+            ><i class="fab fa-x"></i
+          ></a>
+          <a href="https://www.instagram.com/sudovazid/" aria-label="Instagram"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <a href="https://www.linkedin.com/in/vazid/" aria-label="LinkedIn"
+            ><i class="fab fa-linkedin"></i
+          ></a>
+        </div>
+        <p>&copy; 2024 VAZID. All rights reserved.</p>
+        <p>Designed by <a href="../pages/about-me.html">Me</a></p>
+      </div>
+    </footer>
+
+    <script src="../../js/scripts.js"></script>
+    <script>
+      // Script for Gemini API feature
+      document.addEventListener("DOMContentLoaded", () => {
+        const summarizeButton = document.getElementById("summarize-button");
+        const summaryContainer = document.getElementById(
+          "gemini-summary-container",
+        );
+        const summaryTextElement = document.getElementById(
+          "gemini-summary-text",
+        );
+        const loader = document.getElementById("gemini-loader");
+        const blogContent = document.getElementById("blog-content");
+
+        if (summarizeButton) {
+          summarizeButton.addEventListener("click", async () => {
+            // Show summary container and loader, hide previous text
+            summaryContainer.style.display = "block";
+            summaryTextElement.textContent = "";
+            loader.style.display = "block";
+
+            // Get the text from the blog post
+            const postText = blogContent.innerText;
+            const prompt = `Please provide a concise summary of the following blog post about a tech event. Keep it to 3-4 sentences highlighting the main points:\n\n---\n\n${postText}`;
+
+            try {
+              // Prepare the payload for the Gemini API
+              const chatHistory = [{ role: "user", parts: [{ text: prompt }] }];
+              const payload = { contents: chatHistory };
+              const apiKey = $API_KEY; // Leave empty, handled by the environment
+              const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
+
+              // Make the API call
+              const response = await fetch(apiUrl, {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(payload),
+              });
+
+              if (!response.ok) {
+                throw new Error(
+                  `API request failed with status ${response.status}`,
+                );
+              }
+
+              const result = await response.json();
+
+              // Process the response
+              if (
+                result.candidates &&
+                result.candidates.length > 0 &&
+                result.candidates[0].content &&
+                result.candidates[0].content.parts &&
+                result.candidates[0].content.parts.length > 0
+              ) {
+                const summary = result.candidates[0].content.parts[0].text;
+                summaryTextElement.textContent = summary;
+              } else {
+                summaryTextElement.textContent =
+                  "Could not generate summary at this time. Please try again later.";
+              }
+            } catch (error) {
+              console.error("Error calling Gemini API:", error);
+              summaryTextElement.textContent =
+                "An error occurred while generating the summary. Please check the console for details.";
+            } finally {
+              // Hide loader
+              loader.style.display = "none";
             }
-        </script>
-    </head>
-    <body>
-        <header>
-            <nav>
-                <div class="logo">
-                    <a href="../../index.html">
-                        <img
-                            src="../../images/light-logo.png"
-                            alt="VAZID Logo Light"
-                            class="logo-light"
-                        />
-                        <img
-                            src="../../images/dark-logo.png"
-                            alt="VAZID Logo Dark"
-                            class="logo-dark"
-                        />
-                    </a>
-                </div>
-                <ul class="nav-links">
-                    <li>
-                        <a href="../../pages/project.html">CURRENT PROJECTS</a>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropbtn">BLOGS</a>
-                        <div class="dropdown-content">
-                            <a href="#">Linux</a>
-                            <a href="#">DevOps</a>
-                            <a href="#">Monitoring</a>
-                            <a href="#">MLOps</a>
-                            <a href="#">Data science</a>
-                        </div>
-                    </li>
-                    <li><a href="../../pages/quiz.html">QUIZ</a></li>
-                    <li><a href="../../pages/contact.html">CONTACT ME</a></li>
-                    <li><a href="../../pages/about-me.html">ABOUT ME</a></li>
-                </ul>
-                <button id="dark-mode-toggle" class="dark-mode-toggle">
-                    <i class="fas fa-sun"></i>
-                    <i class="fas fa-moon"></i>
-                </button>
-                <div class="icon" onclick="toggleMenu()">☰</div>
-            </nav>
-        </header>
-
-        <main class="blog-content" role="main">
-            <article class="blog-post">
-                <header class="blog-header">
-                    <h1 class="blog-title">
-                        GDG Mangalore 2024: AI on Google Cloud Insights
-                    </h1>
-                    <div class="blog-meta">
-                        <span class="blog-date"
-                            >Posted on: September 22, 2024</span
-                        >
-                        <span class="blog-author"
-                            ><a href="../../pages/about-me.html"
-                                >By: Sheikh Vazid Ahmed</a
-                            ></span
-                        >
-                        <span class="blog-category">Category: Cloud & AI</span>
-                        <span class="blog-event-date"
-                            >Event Date: September 14, 2024</span
-                        >
-                    </div>
-                </header>
-
-                <div class="blog-body">
-                    <img
-                        src="../../images/gdg-event/gdg-mangalore.jpg"
-                        alt="Google Developer Groups Event"
-                        class="event-image"
-                    />
-
-                    <p>
-                        On September 14, 2024, I had the privilege of attending
-                        the
-                        <a
-                            href="https://www.linkedin.com/company/gdg-cloud-mangalore/posts/?feedView=all"
-                            >Google Developer Groups (GDG) event in Mangalore</a
-                        >, organized by
-                        <a
-                            href="https://www.linkedin.com/company/niveus-solutions/"
-                            target="_blank"
-                            >Niveus Solutions</a
-                        >, a Google Cloud partner. The event focused on AI
-                        applications and Google Cloud, providing valuable
-                        insights into the latest advancements in these
-                        technologies.
-                    </p>
-
-                    <h2>Key Sessions and Takeaways</h2>
-
-                    <h3>
-                        Google AI Studio: Building Production-Ready Applications
-                    </h3>
-                    <p>
-                        <strong
-                            ><a href="https://www.linkedin.com/in/sathishvj/"
-                                >Speaker: Satish VJ</a
-                            ></strong
-                        >
-                    </p>
-                    <p>
-                        First up was Satish VJ, and boy, He took us on a journey
-                        through Google AI Studio, showing us how to whip up
-                        production-ready apps faster than you can say "machine
-                        learning." The cherry on top? His deep dive into LLMs,
-                        models, and ML algorithms. But the real showstopper was
-                        his demo of
-                        <a href="https://gencmd.com/search">gencmd</a> – an app
-                        that generates commands with Generative AI.
-                    </p>
-
-                    <p>
-                        Satish VJ delivered an enlightening session on
-                        leveraging Google AI Studio for developing
-                        production-ready applications. Key points included:
-                    </p>
-                    <ul>
-                        <li>
-                            In-depth exploration of Large Language Models (LLMs)
-                            and their applications
-                        </li>
-                        <li>
-                            Overview of ML algorithms and their integration with
-                            Google Cloud services
-                        </li>
-                        <li>
-                            Live demonstration of 'gencmd', an application that
-                            generates commands using Generative AI
-                        </li>
-                    </ul>
-                    <p>
-                        This session provided valuable insights into how AI can
-                        be practically applied in software development
-                        workflows.
-                    </p>
-
-                    <h3>Understanding LLMs and Building AI Agents</h3>
-                    <p>
-                        <strong
-                            ><a href="https://www.linkedin.com/in/ashitaprasad/"
-                                >Speaker: Ashita Prasad</a
-                            ></strong
-                        >
-                    </p>
-                    <p>
-                        Next up, Ashita Prasad, She delved into the fascinating
-                        world of LLMs and building AI agents. But it wasn't all
-                        theory – we got our a workshop on Google Cloud VertexAI.
-                        Building AI agents for Python and Java coding? for you
-                        personal coding AI assitent
-                    </p>
-                    <p>
-                        Ashita Prasad's workshop was particularly engaging,
-                        focusing on:
-                    </p>
-                    <ul>
-                        <li>Fundamental concepts of Large Language Models</li>
-                        <li>Hands-on experience with Google Cloud VertexAI</li>
-                        <li>
-                            Practical exercises in building AI agents for Python
-                            and Java coding tasks
-                        </li>
-                    </ul>
-                    <p>
-                        This workshop was instrumental in bridging the gap
-                        between theoretical knowledge and practical application
-                        of AI in cloud environments.
-                    </p>
-
-                    <h3>Securing GCP AI Environments</h3>
-                    <p>
-                        <strong
-                            ><a href="https://www.linkedin.com/in/imranfosec/"
-                                >Speaker: Imran Roshan</a
-                            ></strong
-                        >
-                    </p>
-
-                    <p>
-                        Imran Roshan's session on AI security in Google Cloud
-                        Platform was both informative and engaging. His humorous
-                        take on AI and ML security had us in stitches while
-                        still dropping knowledge bombs left and right. Who knew
-                        security could be this fun? 😂 Key takeaways included:
-                    </p>
-                    <ul>
-                        <li>
-                            Best practices for securing DevOps most kubernetes
-                            pod in GCP
-                        </li>
-                        <li>Potential vulnerabilities in AI systems</li>
-                    </ul>
-                    <p>
-                        The session effectively highlighted the critical nature
-                        of security in AI implementations, particularly in cloud
-                        environments.
-                    </p>
-
-                    <h2>Additional Workshops</h2>
-                    <p>
-                        While I focused on the AI and cloud security tracks, the
-                        event also featured popular workshops on Firebase and
-                        Flutter, attracting a significant number of student
-                        developers. These sessions underscored the growing
-                        interest in mobile and web application development using
-                        Google technologies.
-                    </p>
-
-                    <h2>Certification and Professional Development</h2>
-                    <p>
-                        The event concluded with the distribution of
-                        certificates of attendance, recognizing the
-                        participants' commitment to professional development in
-                        the field of cloud computing and AI.
-                    </p>
-
-                    <img
-                        src="../../images/gdg-event/gdg-certification.png"
-                        alt="GDG Mangalore Event Certificate"
-                        class="event-image"
-                    />
-
-                    <h2>Conclusion</h2>
-                    <p>
-                        The GDG Mangalore event provided a comprehensive
-                        overview of the current state and future directions of
-                        AI and cloud technologies. As a DevOps engineer and
-                        cloud solution architect, the insights gained from this
-                        event are invaluable for implementing cutting-edge
-                        solutions in my professional projects.
-                    </p>
-
-                    <p>
-                        The combination of theoretical knowledge and practical
-                        demonstrations offered a well-rounded learning
-                        experience, reinforcing the importance of staying
-                        updated with the rapidly evolving landscape of cloud and
-                        AI technologies.
-                    </p>
-
-                    <p>
-                        For professionals and organizations looking to leverage
-                        AI and cloud solutions, events like these offer crucial
-                        insights and networking opportunities. I encourage
-                        fellow technology enthusiasts to participate in future
-                        GDG events to stay at the forefront of these
-                        transformative technologies.
-                    </p>
-
-                    <a href="../../pages/contact.html" class="cta-button"
-                        >Contact Me</a
-                    >
-                </div>
-
-                <footer class="blog-footer">
-                    <div class="blog-tags">
-                        Tags:
-                        <a href="#" class="tag">Google Cloud</a>
-                        <a href="#" class="tag">AI</a>
-                        <a href="#" class="tag">Machine Learning</a>
-                        <a href="#" class="tag">DevOps</a>
-                        <a href="#" class="tag">Professional Development</a>
-                    </div>
-                    <div class="blog-share">
-                        Share this post:
-                        <a
-                            href="https://www.linkedin.com/sharing/share-offsite/?url=YOUR_URL"
-                            class="share-icon"
-                            aria-label="Share on LinkedIn"
-                            ><i class="fab fa-linkedin"></i
-                        ></a>
-                        <a
-                            href="https://twitter.com/intent/tweet?url=YOUR_URL&text=YOUR_TEXT"
-                            class="share-icon"
-                            aria-label="Share on Twitter"
-                            ><i class="fab fa-twitter"></i
-                        ></a>
-                        <a
-                            href="https://www.facebook.com/sharer/sharer.php?u=YOUR_URL"
-                            class="share-icon"
-                            aria-label="Share on Facebook"
-                            ><i class="fab fa-facebook"></i
-                        ></a>
-                    </div>
-                </footer>
-            </article>
-        </main>
-
-        <footer>
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>About</h3>
-                    <p>
-                        Sheikh Vazid Ahmed is a skilled DevOps Engineer and
-                        Cloud Architect proficient in GCP, AWS, and Azure.
-                    </p>
-                </div>
-                <div class="footer-section">
-                    <h3>Quick Links</h3>
-                    <ul>
-                        <li><a href="../index.html">Home</a></li>
-                        <li><a href="../pages/project.html">Project</a></li>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="../pages/contact.html">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h3>Contact Me</h3>
-                    <p><strong>Email:</strong> sheikh.vazid.ahmed@gmail.com</p>
-                    <p>
-                        <strong>Current Location:</strong> Mangalore, Karnataka
-                    </p>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <div class="social-icons">
-                    <a
-                        href="https://www.facebook.com/vazid009"
-                        aria-label="Facebook"
-                        ><i class="fab fa-facebook"></i
-                    ></a>
-                    <a href="https://x.com/sudovazid" aria-label="x"
-                        ><i class="fab fa-x"></i
-                    ></a>
-                    <a
-                        href="https://www.instagram.com/sudovazid/"
-                        aria-label="Instagram"
-                        ><i class="fab fa-instagram"></i
-                    ></a>
-                    <a
-                        href="https://www.linkedin.com/in/vazid/"
-                        aria-label="LinkedIn"
-                        ><i class="fab fa-linkedin"></i
-                    ></a>
-                </div>
-                <p>&copy; 2024 VAZID. All rights reserved.</p>
-                <p>Designed by <a href="../pages/about-me.html">Me</a></p>
-            </div>
-        </footer>
-
-        <script>
-            function toggleMenu() {
-                var x = document.querySelector(".nav-links");
-                if (x.style.display === "flex") {
-                    x.style.display = "none";
-                } else {
-                    x.style.display = "flex";
-                }
-            }
-
-            const darkModeToggle = document.getElementById("dark-mode-toggle");
-            darkModeToggle.addEventListener("click", () => {
-                document.body.classList.toggle("dark-mode");
-                darkModeToggle.classList.toggle("dark-mode");
-            });
-        </script>
-    </body>
+          });
+        }
+      });
+    </script>
+  </body>
 </html>
